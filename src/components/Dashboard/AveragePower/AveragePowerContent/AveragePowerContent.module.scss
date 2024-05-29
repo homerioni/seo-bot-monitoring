@@ -1,0 +1,75 @@
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.5rem 2rem 4rem 2rem;
+  border-radius: 3rem;
+  background-color: white;
+}
+
+.background {
+  position: absolute;
+  left: 20rem;
+  bottom: 3.5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 50rem;
+  height: calc(100% - 5.5rem);
+  font-weight: 400;
+  font-size: 1rem;
+  color: #8998AB;
+
+  > div {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 0;
+    height: 100%;
+    border-left: 1px dashed rgba(161, 177, 197, 0.3);
+
+    > span {
+      transform: translateY(calc(100% + 1rem));
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .main {
+    flex-direction: row;
+    gap: 3.2rem;
+    width: calc(100% + 3.2rem);
+    height: 98rem;
+    padding: 12rem 3.2rem 3.2rem 8rem;
+    border-radius: 5rem 0 0 5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .background {
+    left: 2.4rem;
+    bottom: 11.4rem;
+    flex-direction: column-reverse;
+    gap: 2.8rem;
+    width: auto;
+    height: auto;
+    font-size: 2.4rem;
+
+    > div {
+      display: block;
+      width: auto;
+      height: auto;
+      border-left: none;
+
+      > span {
+        transform: none;
+      }
+    }
+  }
+}

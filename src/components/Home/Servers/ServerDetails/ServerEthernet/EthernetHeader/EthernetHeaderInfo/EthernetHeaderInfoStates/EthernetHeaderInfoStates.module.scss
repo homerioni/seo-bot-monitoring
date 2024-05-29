@@ -1,0 +1,36 @@
+@import "src/assets/scss/param";
+
+.infoBox {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 1.2rem 2rem 1.2rem 1.6rem;
+  border-radius: 100rem;
+  background: rgba(235, 236, 242, 0.70);
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  > i {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid white;
+    border-radius: 100%;
+  }
+
+  &:nth-child(1) > i {
+    background-color: $green;
+  }
+
+  &:nth-child(2) > i {
+    background-color: $azure;
+  }
+
+  &:nth-child(3) > i {
+    background-color: $gray;
+  }
+}

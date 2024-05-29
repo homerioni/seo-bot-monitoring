@@ -1,0 +1,60 @@
+@import "../../../../../../assets/scss/param";
+
+.main {
+  display: flex;
+  gap: 1rem;
+}
+
+.textarea {
+  flex: auto;
+}
+
+.textareaLabel {
+  height: 18rem;
+}
+
+.buttons {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+.delBtn {
+  position: relative;
+  z-index: 5;
+  width: 5.7rem;
+  height: 5.7rem;
+}
+
+.upBtn,
+.downBtn {
+  position: relative;
+  width: 5.7rem;
+  height: 5.7rem;
+  border-radius: 2rem;
+  background-color: #F3F4F8;
+  transition: background-color .2s ease;
+  @include btn-hover;
+
+  > svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 2.4rem;
+    height: 2.4rem;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.upBtn {
+  > svg {
+    transform: translate(-55%, -60%) rotate(-90deg);
+  }
+}
+
+.downBtn {
+  > svg {
+    transform: translate(-55%, -40%) rotate(90deg);
+  }
+}

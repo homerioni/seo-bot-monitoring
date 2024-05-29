@@ -1,0 +1,53 @@
+.main {
+  height: auto;
+  padding: .5rem 1rem 0 1rem;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+.list {
+  width: 100%;
+  padding-right: 1.6rem;
+  padding-bottom: .6rem;
+  margin-top: .8rem;
+  max-height: 43rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    min-width: 3px;
+    width: .3rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .main {
+    height: auto;
+    padding: 2.4rem 2.4rem 0 2.4rem;
+    border-radius: 5rem;
+
+    &.long {
+      width: calc(100% + 3.2rem);
+      border-radius: 5rem 0 0 5rem;
+    }
+  }
+
+  .list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(7, 1fr);
+    column-gap: 2rem;
+    width: fit-content;
+    max-width: calc(100% + 4.8rem);
+    padding: 2.4rem 2.4rem .8rem 2.4rem;
+    margin: 0 -2.4rem;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+}

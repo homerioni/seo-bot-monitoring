@@ -1,0 +1,19 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.title {
+  margin-bottom: 3rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(5, 31.6rem);
+  grid-auto-rows: 23.4rem;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}

@@ -1,0 +1,38 @@
+@import "./src/assets/scss/param";
+
+.addBtn {
+  order: 10;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  letter-spacing: .02em;
+
+  > .icon {
+    position: relative;
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 100%;
+    background-color: $green;
+    @include btn-hover;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 1.6rem;
+      height: 2px;
+      border-radius: 100rem;
+      transform: translate(-50%, -50%);
+      background-color: white;
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+}

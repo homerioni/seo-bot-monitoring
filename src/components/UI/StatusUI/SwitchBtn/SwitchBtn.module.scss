@@ -1,0 +1,45 @@
+@import "src/assets/scss/param";
+
+.switchBtn {
+  position: relative;
+  width: 6.6rem;
+  height: 3.6rem;
+  margin-left: auto;
+  border-radius: 100rem;
+  background-color: white;
+  box-shadow: .5rem .5rem 2rem -1rem rgba(29, 46, 58, 0.16);
+  transition: background-color .2s ease;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: .6rem;
+    top: 50%;
+    width: 2.4rem;
+    height: 2.4rem;
+    transform: translate(0, -50%);
+    border-radius: 100%;
+    border: 3px solid #B0B2C0;
+    background-color: #CACCDA;
+    transition: transform .3s ease, background-color .3s ease, border .3s ease;
+  }
+
+  &.disable {
+    &:before {
+      border: 3px solid #C62555;
+      background-color: $red;
+    }
+  }
+
+  &.active {
+    &:before {
+      transform: translate(3rem, -50%);
+      border: 3px solid #78C43B;
+      background-color: $green;
+    }
+  }
+
+  &.gray {
+    background-color: #ebecf2;
+  }
+}

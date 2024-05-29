@@ -1,0 +1,96 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 8rem;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .delBtn {
+    width: 3.6rem;
+    height: 3.6rem;
+
+    > svg {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+}
+
+.title {
+  font-weight: 400;
+  font-size: 2.2rem;
+}
+
+.disabled {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.labelBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 40rem;
+  border-radius: 100rem;
+  background-color: rgba(235, 236, 242, 0.70);
+
+  &.time {
+    width: 18rem;
+
+    input {
+      max-width: 6rem;
+      width: 2rem;
+      margin-right: .2rem;
+    }
+  }
+}
+
+.empty {
+  width: 100% !important;
+
+  ~ * {
+    display: none;
+  }
+}
+
+.label {
+  flex: auto;
+  padding-left: 2.5rem;
+
+  > input {
+    display: inline-block;
+    width: 100%;
+  }
+}

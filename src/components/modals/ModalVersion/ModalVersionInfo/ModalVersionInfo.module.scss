@@ -1,0 +1,49 @@
+@import "./src/assets/scss/param";
+
+.main {
+  margin-bottom: 5rem;
+}
+
+.textBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: .6rem;
+}
+
+.percent {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.ready {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: $green;
+  text-transform: uppercase;
+
+  &.error {
+    color: $red;
+  }
+}
+
+.line {
+  position: relative;
+  width: 100%;
+  height: .8rem;
+  border-radius: 100rem;
+  background-color: #EEEFF5;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: calc(var(--percent) - .4rem);
+    height: .4rem;
+    margin: 0 .2rem;
+    border-radius: 100rem;
+    transform: translateY(-50%);
+    background-color: $green;
+  }
+}

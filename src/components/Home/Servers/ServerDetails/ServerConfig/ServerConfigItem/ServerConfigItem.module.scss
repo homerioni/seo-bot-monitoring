@@ -1,0 +1,51 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #93A1B2;
+}
+
+.name {
+  margin-bottom: 1.8rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: normal;
+
+  > i {
+    font-style: normal;
+    color: #A1B1C599;
+  }
+
+  > b {
+    color: $purple;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  margin-top: auto;
+  border-radius: 100%;
+  border: 2px solid #EEEFF5;
+  transition: background-color .2s ease;
+
+  > svg {
+    width: 2.2rem;
+    height: 1.8rem;
+  }
+
+  &:hover {
+    background-color: #EEEFF5;
+  }
+}

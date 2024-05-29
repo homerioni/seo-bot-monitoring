@@ -1,0 +1,50 @@
+.main {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #93A1B2;
+  text-transform: uppercase;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: -2rem;
+    z-index: -1;
+    display: block;
+    width: calc(100% + 3rem);
+    height: calc(100% + 3rem);
+    background-color: rgb(242,242,247);
+  }
+
+  > * {
+    flex: none;
+
+    &:nth-child(1) {
+      width: 7.6rem;
+    }
+    &:nth-child(2) {
+      width: 25rem;
+    }
+    &:nth-child(3) {
+      width: 18rem;
+    }
+    &:nth-child(4) {
+      width: 10rem;
+    }
+    &:nth-child(5) {
+      width: 6rem;
+    }
+    &:nth-child(6) {
+      width: 6.6rem;
+      margin-left: auto;
+      text-align: center;
+    }
+  }
+}

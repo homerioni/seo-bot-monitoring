@@ -1,0 +1,56 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: relative;
+  min-width: 23.2rem;
+  padding-right: 4rem;
+  border: 1px solid $green;
+  border-radius: 1.5rem;
+  background-color: white;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: .02em;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0 1rem 1.5rem;
+    cursor: pointer;
+  }
+}
+
+.name {
+  transform: translateY(1px);
+  font-weight: 700;
+}
+
+.ip {
+  transform: translateY(1px);
+}
+
+.del {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  width: 1.8rem;
+  height: 1.8rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1.4rem;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    background-color: $red;
+  }
+
+  &:after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}

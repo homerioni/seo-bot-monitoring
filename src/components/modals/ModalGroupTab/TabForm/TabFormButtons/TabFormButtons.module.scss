@@ -1,0 +1,140 @@
+@import "./src/assets/scss/param";
+
+.main {
+  flex: 100%;
+  display: flex;
+  gap: 2rem;
+}
+
+.submit {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 20.4rem;
+  height: 5.8rem;
+  padding: 0 .8rem;
+  border-radius: 100rem;
+  background-color: $purple;
+  font-weight: 800;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: white;
+  transition: background-color .3s ease;
+
+  i {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    margin-right: 2.2rem;
+    border-radius: 100%;
+    background-color: rgba(173, 184, 255, 0.4);
+    transition: background-color .3s ease, color .3s ease;
+
+    > svg {
+      position: absolute;
+      z-index: 1;
+      left: 50%;
+      top: 50%;
+      width: 2.2rem;
+      height: 2.2rem;
+      transform: translate(-50%, -50%);
+
+      path {
+        stroke: white;
+        transition: stroke .3s ease;
+      }
+
+      &.ok {
+        width: 2.2rem;
+        height: 2.2rem;
+      }
+
+      &.no {
+        display: none;
+        width: 2.8rem;
+        height: 2.8rem;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 3.6rem;
+      height: 3.6rem;
+      border-radius: 100%;
+      transform: translate(-50%, -50%);
+      background-color: #ADB8FF;
+      transition: background-color .3s ease;
+    }
+  }
+
+  span {
+    transform: translateY(1px);
+  }
+
+  &:not(.disable) {
+    @include btn-hover;
+  }
+
+  &.disable {
+    background-color: #F3F4F8;
+    color: #92A1B2;
+    cursor: default;
+
+    i {
+      background-color: rgba(179, 184, 215, 0.4);
+
+      &:before {
+        background-color: #B3B8D7;
+      }
+
+      > svg {
+        &.ok {
+          display: none;
+        }
+
+        &.no {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &.active {
+    background-color: $green;
+
+    i {
+      background-color: #A5DC79;
+
+      &:before {
+        background-color: #BFE99F;
+      }
+    }
+  }
+}
+
+.cancel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.8rem 3.8rem;
+  border-radius: 100rem;
+  background-color: rgba(238, 239, 245, 0.7);
+  font-weight: 800;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  @include btn-hover;
+
+  span {
+    transform: translateY(1px);
+  }
+}

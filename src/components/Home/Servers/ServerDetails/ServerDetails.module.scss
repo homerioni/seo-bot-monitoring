@@ -1,0 +1,30 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: absolute;
+  left: -1rem;
+  top: 0;
+  z-index: -2;
+  display: block;
+  width: calc(100% + 2rem);
+  padding: 7rem 2rem 2rem 2rem;
+  transform-origin: top;
+  border-radius: 2.7rem;
+  background-color: white;
+  box-shadow: 2rem 2.5rem 10rem rgba(34, 41, 83, 0.15);
+  cursor: default;
+  animation: showAnim .4s ease;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 1px;
+    height: 1rem;
+  }
+
+  &.closing {
+    animation: hideAnim .4s ease;
+  }
+}

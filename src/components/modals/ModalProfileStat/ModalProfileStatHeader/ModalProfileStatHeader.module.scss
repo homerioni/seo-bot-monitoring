@@ -1,0 +1,21 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 4rem;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+.textBox {
+  font-weight: 700;
+  font-size: 1.5rem;
+
+  .gray {
+    color: #8998AB;
+  }
+}

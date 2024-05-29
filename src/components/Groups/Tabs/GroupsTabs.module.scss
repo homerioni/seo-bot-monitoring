@@ -1,0 +1,30 @@
+@import "./src/assets/scss/param";
+
+.tabs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.tab {
+  padding: 1.4rem 4.3rem;
+  border-radius: 100rem;
+  background-color: white;
+  font-weight: 700;
+  font-size: 1.8rem;
+  transition: background-color .3s ease, color .2s ease;
+  cursor: pointer;
+
+  &:not(.active) {
+    @include btn-hover;
+  }
+
+  &.active {
+    background-color: $green;
+    color: white;
+  }
+}

@@ -1,0 +1,131 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: relative;
+}
+
+.selectBox {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  min-width: 26rem;
+  height: 5.2rem;
+  padding: .6rem;
+  border-radius: 100rem;
+  background-color: #EEEFF5;
+  @include min-btn-hover;
+  cursor: pointer;
+}
+
+.selectIconBox {
+  flex: auto;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.selectIcon {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+
+  > svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.name {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  transform: translateY(1px);
+}
+
+.arrow {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  background-color: white;
+
+  > svg {
+    width: 2rem;
+    height: 2rem;
+    transform: scaleY(-1);
+    transition: transform .25s ease;
+  }
+
+  &.active {
+    > svg {
+      transform: scaleY(1);
+    }
+  }
+}
+
+@keyframes showAnim {
+  0% {
+    opacity: 0;
+    transform: scaleY(.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes closeAnim {
+  0% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleY(.4);
+  }
+}
+
+.list {
+  position: absolute;
+  left: 0;
+  top: calc(100% + .4rem);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  width: 100%;
+  padding: .8rem;
+  border-radius: 2.8rem;
+  transform-origin: top;
+  background-color: white;
+  box-shadow: .7rem 1rem 4rem -.5rem #6873BE42;
+  animation: showAnim .25s ease;
+
+  &.closing {
+    animation: closeAnim .25s ease;
+  }
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  width: 100%;
+  padding: .8rem;
+  border-radius: 100rem;
+  background-color: #EEEFF5;
+  @include min-btn-hover;
+  cursor: pointer;
+
+  > svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}

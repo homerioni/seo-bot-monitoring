@@ -1,0 +1,102 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .2rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 100%;
+  background-color: $gray-light;
+  font-weight: 700;
+  font-size: .8rem;
+
+  > svg {
+    width: 1.2rem;
+    height: 1.3rem;
+  }
+
+  &:hover {
+    .tooltipBox {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.tooltipBox {
+  position: absolute;
+  right: -.7rem;
+  top: calc(100% + 1rem);
+  z-index: 1;
+  width: 23rem;
+  padding: 1.2rem 1rem 0 1rem;
+  border-radius: 1rem;
+  background-color: $black;
+  box-shadow: 0 .5rem 2.6rem 0 #353B5A4D;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .25s ease, visibility .25s;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 2rem;
+    bottom: 100%;
+    width: .8rem;
+    height: .8rem;
+    border-radius: .1rem;
+    transform: translateY(65%) rotate(45deg);
+    background-color: $black;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1rem;
+    width: 100%;
+    height: 1rem;
+  }
+
+  > ul {
+    width: 100%;
+    max-height: 30rem;
+    padding-bottom: 1.2rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      width: max(.3rem, 3px);
+      border-radius: 1rem;
+      background-color: rgba(115, 121, 141, 0.1);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 1rem;
+      background-color: rgba(115, 121, 141, 0.2);
+    }
+  }
+}
+
+.tooltip {
+  width: calc(100% - 1rem);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: white;
+
+  > p:last-child {
+    margin-top: .8rem;
+    font-size: 1.1rem;
+    color: #FE6E1E;
+  }
+
+  &:not(:first-child) {
+    margin-top: 1.2rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(115, 121, 141, 0.4);
+  }
+}

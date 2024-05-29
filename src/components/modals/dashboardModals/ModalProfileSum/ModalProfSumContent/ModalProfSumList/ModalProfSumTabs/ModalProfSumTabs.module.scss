@@ -1,0 +1,84 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: relative;
+  display: flex;
+  gap: .6rem;
+  width: 100%;
+  height: 5.4rem;
+  margin-bottom: 1.8rem;
+  border-radius: 3rem;
+  background-color: rgb(227, 231, 238);
+}
+
+.content {
+  display: flex;
+  gap: .6rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 3rem 0 0 3rem;
+  padding: .6rem 0 .6rem .6rem;
+  overflow-y: hidden;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+.item {
+  flex: none;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 100%;
+  padding: 0 2.6rem;
+  border-radius: 100rem;
+  background-color: white;
+  font-weight: 700;
+  font-size: 1.6rem;
+  @include min-btn-hover;
+
+  &.active {
+    background-color: $green;
+    color: white;
+  }
+}
+
+.arrow {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.2rem;
+  height: 4.2rem;
+  margin: auto .6rem auto 0;
+  border-radius: 100%;
+  background-color: white;
+  @include min-btn-hover;
+}
+
+@media (max-width: 48em) {
+  .main {
+    gap: .8rem;
+    height: 8rem;
+    margin-bottom: 3rem;
+    border-radius: 30rem;
+  }
+
+  .content {
+    gap: .8rem;
+    border-radius: 30rem;
+    padding: .8rem 0 .8rem .8rem;
+  }
+
+  .item {
+    padding: 0 3.2rem;
+    font-size: 2.8rem;
+  }
+
+  .arrow {
+    display: none;
+  }
+}

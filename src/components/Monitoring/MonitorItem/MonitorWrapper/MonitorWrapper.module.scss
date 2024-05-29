@@ -1,0 +1,20 @@
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 39.4rem);
+  gap: 2rem;
+  transform-origin: top;
+  transition: transform .3s ease;
+
+  &.closed {
+    position: relative;
+    z-index: 5;
+    height: 0;
+    transform: scaleY(0);
+  }
+}
+
+.list {
+  padding: .6rem 1.4rem;
+  border-radius: 2rem;
+  background-color: white;
+}

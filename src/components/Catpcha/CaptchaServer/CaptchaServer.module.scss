@@ -1,0 +1,159 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  cursor: pointer;
+  isolation: isolate;
+
+  > * {
+    flex: none;
+    display: flex;
+    align-items: center;
+
+    &:nth-child(1) {
+      width: 3.6rem;
+    }
+    &:nth-child(2) {
+      justify-content: center;
+      width: 1rem;
+      text-align: center;
+    }
+    &:nth-child(3) {
+      width: 2.4rem;
+    }
+    &:nth-child(4) {
+      width: 17rem;
+    }
+    &:nth-child(5) {
+      width: 20rem;
+    }
+    &:nth-child(6) {
+      width: 74.8rem;
+    }
+    &:nth-child(7) {
+      justify-content: flex-end;
+      width: 18.8rem;
+      text-align: right;
+    }
+    &:nth-child(8) {
+      justify-content: flex-end;
+      width: 20rem;
+      text-align: right;
+    }
+
+    &:not(:last-child) {
+      margin-right: 1.4rem;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: 0;
+    z-index: -1;
+    width: calc(100% + 2rem);
+    height: 100%;
+    border-radius: 2.7rem;
+    transition: background-color .15s ease, box-shadow .15s ease;
+  }
+
+  &:hover {
+    &:before {
+      background-color: rgba(256,256,256,0.4);
+    }
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid white;
+  }
+
+  &.active {
+    z-index: 2;
+    font-weight: 700;
+
+    &:before {
+      background-color: white;
+      box-shadow: 1rem 1rem 4rem 0 #2229531A;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid transparent;
+    }
+  }
+
+  &.upper {
+    z-index: 1;
+  }
+}
+
+.owner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 100%;
+
+  &:not(:last-child) {
+    margin-right: .5rem;
+  }
+
+  > svg {
+    display: none;
+  }
+
+  &.our,
+  &.OUR {
+    display: flex;
+    background-color: $purple;
+
+    > svg {
+      width: 1.1rem;
+      height: 1.1rem;
+
+      &:first-child {
+        display: block;
+      }
+    }
+  }
+
+  &.rent,
+  &.RENT {
+    display: flex;
+    background-color: $pink;
+
+    > svg {
+      width: 1.5rem;
+      height: 1.5rem;
+
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+}
+
+.status {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background-color: $gray;
+
+  &:not(:last-child) {
+    margin-right: 1.6rem;
+  }
+
+  &.active {
+    background-color: $green;
+  }
+
+  &.disable {
+    background-color: $red;
+  }
+}

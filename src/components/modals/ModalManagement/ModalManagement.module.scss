@@ -1,0 +1,12 @@
+@import "src/assets/scss/param";
+
+.container {
+  width: 80rem;
+  padding: 4rem 7.7rem 5rem 7.7rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}

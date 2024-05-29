@@ -1,0 +1,37 @@
+.container {
+  width: 100rem;
+  padding: 3rem 2rem 2rem 2rem;
+}
+
+.contentTitle {
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #93A1B2;
+  text-transform: uppercase;
+}
+
+.content {
+  padding: 2rem 2rem 0 2rem;
+  border-radius: 3rem;
+  background-color: rgba(238, 239, 245, 0.70);
+}
+
+@media (max-width: 48em) {
+  .container {
+    width: 100%;
+    padding: 3.2rem;
+  }
+
+  .contentTitle {
+    padding-left: 0;
+    margin-bottom: 2.4rem;
+    font-size: 2rem;
+  }
+
+  .content {
+    padding: 3.2rem 3.2rem 0 3.2rem;
+    border-radius: 5rem;
+  }
+}

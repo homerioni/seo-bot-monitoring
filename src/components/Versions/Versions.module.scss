@@ -1,0 +1,40 @@
+@import "src/assets/scss/param";
+
+.main {
+  padding: .5rem 1rem;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-image: url('../../assets/img/updateLine.svg');
+  background-position: top -1rem left 0;
+  background-size: contain;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 8rem;
+    background: rgba(242,242,247);
+  }
+}
+
+.title {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2rem;
+  color: #393B44;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  column-gap: 5rem;
+  width: fit-content;
+  height: calc(100% - 5rem);
+}

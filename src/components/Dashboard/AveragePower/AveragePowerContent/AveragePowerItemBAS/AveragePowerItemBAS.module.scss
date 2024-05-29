@@ -1,0 +1,149 @@
+.main {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  &:hover {
+    z-index: 3;
+  }
+}
+
+.nameBox {
+  display: flex;
+  align-items: center;
+  width: 16rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+
+  > span:first-child {
+    margin-right: auto;
+  }
+
+  > span:last-child {
+    font-size: 1.3rem;
+  }
+
+  > svg {
+    margin: 0 .5rem 0 1rem;
+    width: 1.6rem;
+    height: 1.4rem;
+  }
+}
+
+.valBox {
+  flex: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.val {
+  width: calc(var(--percent) / 100 * 50rem);
+  height: 1rem;
+  border-radius: 2rem;
+  background-color: var(--color);
+}
+
+.valInfo {
+  display: flex;
+  align-items: center;
+}
+
+.dayInfo {
+  margin-right: 1rem;
+
+  > span {
+    font-weight: 700;
+    font-size: 1.3rem;
+
+    &:last-child {
+      color: #8998AB;
+    }
+  }
+}
+
+.valMinMax {
+  flex: none;
+  position: relative;
+  transform: translateY(min(1px, .1rem));
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: .5rem;
+  }
+
+  > span {
+    font-weight: 700;
+    font-size: 1.1rem;
+
+    &:nth-child(2) {
+      margin-left: .2rem;
+      color: #8998AB;
+    }
+  }
+
+  &:hover {
+    z-index: 1;
+    color: var(--color);
+
+    .hoverBox {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    > span:nth-child(2) {
+      color: var(--color);
+    }
+  }
+}
+
+.hoverBox {
+  position: absolute;
+  left: -3rem;
+  top: calc(100% + 1rem);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  width: max-content;
+  padding: 1.6rem 1.7rem 1.3rem 1.3rem;
+  border-radius: 1rem;
+  background-color: #393B44;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s ease, visibility .2s;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 4rem;
+    bottom: 100%;
+    width: 1rem;
+    height: 1rem;
+    transform: translateY(50%) rotate(45deg);
+    background-color: #393B44;
+  }
+}
+
+.hoverBoxName {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: white;
+
+  > svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    transform: translateY(-.2rem);
+  }
+}
+
+.hoverBoxDate {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #A1B1C5;
+}

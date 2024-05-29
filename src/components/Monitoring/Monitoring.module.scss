@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    width: calc(50% - .8rem);
+    height: fit-content;
+    padding: 0 2rem 2rem 2rem;
+    border-radius: 3.5rem;
+    background-color: rgba(221, 223, 236, 0.4);
+  }
+}

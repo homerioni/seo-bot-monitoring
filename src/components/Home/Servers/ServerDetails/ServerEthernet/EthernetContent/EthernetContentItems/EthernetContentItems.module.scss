@@ -1,0 +1,185 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  padding-left: 1rem;
+  margin-left: -1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: $gray;
+  }
+}
+
+.items {
+  flex: none;
+  position: relative;
+  min-width: 6.6rem;
+  padding-bottom: 5.2rem;
+  border-right: 2px solid #EFF1FD;
+
+  > div {
+    display: flex;
+    gap: 2px;
+    height: 98px;
+    padding: 8px 4px 14px 4px;
+  }
+
+  > button {
+    position: absolute;
+    right: -10%;
+    bottom: 1rem;
+    margin: -1rem -1rem -1rem -1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #8998AB;
+    transition: color .15s ease;
+
+    &.bold {
+      font-weight: 700;
+      color: $black;
+    }
+
+    &.active {
+      font-weight: 700;
+      color: $black;
+
+      ~ .btnBg {
+        display: block;
+      }
+    }
+
+    &:hover {
+      color: $black;
+    }
+
+    > span {
+      position: relative;
+      z-index: 3;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      width: 100%;
+      height: 5rem;
+      background: white;
+    }
+  }
+
+  &:first-child {
+    border-left: 2px solid #EFF1FD;
+
+    > p {
+      position: absolute;
+      left: 0;
+      bottom: 1rem;
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: #8998AB;
+      transition: color .15s ease;
+
+      &.active {
+        font-weight: 700;
+        color: $black;
+      }
+
+      > span {
+        position: relative;
+        z-index: 3;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: -2px;
+        bottom: -1rem;
+        z-index: 1;
+        width: 100%;
+        height: 5rem;
+        background: white;
+      }
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: calc(5.2rem + 4px);
+    width: 100%;
+    height: 2px;
+    background: #EFF1FD;
+  }
+}
+
+.item {
+  width: 3px;
+  height: 100%;
+  border-radius: 10rem;
+
+  &.lte {
+    background-color: $green;
+  }
+
+  &.ethernet {
+    background-color: $azure;
+  }
+
+  &.off {
+    background-color: #A1B1C5;
+  }
+}
+
+.btnBg {
+  display: none;
+  position: absolute;
+  left: -2.4rem;
+  bottom: -1.5rem;
+  z-index: 2;
+  width: calc(100% + 4.5rem);
+  height: 5rem;
+  border-radius: 1.6rem 1.6rem 0 0;
+  background: #EEEFF5;
+}
+
+@media (min-width: 4000px) {
+  .items {
+    border-right: 4px solid #EFF1FD;
+
+    > div {
+      gap: 4px;
+      height: 196px;
+      padding: 16px 8px 28px 8px;
+    }
+
+    &:first-child {
+      border-left: 4px solid #EFF1FD;
+
+      > p {
+        &:before {
+          left: -4px;
+        }
+      }
+    }
+
+    &:after {
+      bottom: calc(4.2rem + 8px);
+      height: 4px;
+    }
+  }
+
+  .item {
+    width: 6px;
+  }
+}

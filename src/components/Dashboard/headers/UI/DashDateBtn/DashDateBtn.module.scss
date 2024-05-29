@@ -1,0 +1,212 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: .5rem;
+}
+
+.datesBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 100rem;
+  background-color: white;
+
+  &.active {
+    width: 18.4rem;
+    padding-left: 1.5rem;
+    padding-right: 4rem;
+
+    .dates,
+    .reset {
+      display: block;
+    }
+  }
+}
+
+.btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 100%;
+  @include min-btn-hover;
+
+  > svg {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+.dates {
+  display: none;
+  transform: translateY(1px);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.reset {
+  display: none;
+  position: relative;
+  width: 1.6rem;
+  height: 1.6rem;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1.2rem;
+    height: 2px;
+    border-radius: 1rem;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: #92A1B2;
+    transition: background-color .2s ease;
+  }
+
+  &:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &:hover {
+    &:before,
+    &:after {
+      background-color: $black;
+    }
+  }
+}
+
+@media (min-width: 48.01em) {
+  .datesContainer {
+    display: none;
+  }
+}
+
+@media (max-width: 48em) {
+  .main {
+    z-index: 10;
+    gap: 1.6rem;
+  }
+
+  .datesBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 100rem;
+    background-color: white;
+
+    &.active {
+      width: 39.6rem;
+      padding-left: 3rem;
+      padding-right: 8rem;
+    }
+  }
+
+  .btn {
+    width: 8rem;
+    height: 8rem;
+
+    > svg {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  .datesContainer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+    padding: 3.2rem;
+    background-color: white;
+
+    &:not(.active) {
+      display: none;
+    }
+  }
+
+  .containerHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    margin-bottom: 4rem;
+  }
+
+  .containerTitleBox {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+
+    > p {
+      &:nth-child(1) {
+        font-weight: 400;
+        font-size: 4.4rem;
+      }
+
+      &:nth-child(2) {
+        font-weight: 700;
+        font-size: 3.2rem;
+        color: #8998AB;
+      }
+    }
+  }
+
+  .containerClose {
+    flex: none;
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    background-color: #EEEFF5;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 36%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      height: 2px;
+      border-radius: 10rem;
+      background-color: $black;
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  .dates {
+    display: none;
+    transform: translateY(1px);
+    font-weight: 700;
+    font-size: 2.8rem;
+  }
+
+  .reset {
+    width: 4rem;
+    height: 3.2rem;
+
+    &:before,
+    &:after {
+      width: 2.4rem;
+    }
+  }
+}

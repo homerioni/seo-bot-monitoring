@@ -1,0 +1,81 @@
+@import "src/assets/scss/param";
+
+.settingBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 100%;
+  background-color: white;
+  @include min-btn-hover;
+
+  > svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.statusBar {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  height: 3.6rem;
+  padding: 0 2rem;
+  border: 1px solid white;
+  border-radius: 100rem;
+}
+
+.status {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+
+  &:not(:first-child):before {
+    content: '/';
+    position: absolute;
+    right: calc(100% + .4rem);
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(137, 152, 171, 0.5);
+  }
+}
+
+.statusIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid white;
+  border-radius: 100%;
+
+  ~ div {
+    transform: translateY(1px);
+  }
+
+  > svg {
+    width: .8rem;
+    height: .8rem;
+  }
+
+  &.green {
+    background-color: $green;
+  }
+
+  &.purple {
+    background-color: $purpleStatus;
+  }
+
+  &.red {
+    background-color: $red;
+  }
+
+  &.error {
+    border: none;
+    background-color: $orange;
+  }
+}

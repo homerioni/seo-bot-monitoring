@@ -1,0 +1,42 @@
+@import "../../../assets/scss/param";
+
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.2rem;
+  height: 5.2rem;
+  padding: 1rem;
+  border-radius: 100%;
+  background-color: $green;
+  transition: box-shadow .2s ease;
+
+  &:hover {
+    box-shadow: 0 0 1rem 1px rgba(0,0,0,0.2) inset;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1.6rem;
+    height: .2rem;
+    min-height: 1px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+  }
+
+  &:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  &.children {
+    &:before,
+    &:after {
+      content: none;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.icon,
+.addBtn,
+.toggleBtn {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.8rem;
+  height: 5.8rem;
+  border-radius: 100%;
+  background-color: #EEEFF5;
+}
+
+.icon {
+  > svg {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    > path {
+      fill: #8B98EE;
+    }
+  }
+}
+
+.addBtn {
+  background-color: $green;
+  @include btn-hover;
+
+  > svg {
+    width: 2.9rem;
+    height: 2.9rem;
+  }
+}
+
+.toggleBtn {
+  @include btn-hover;
+
+  > svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    transition: transform .3s ease;
+  }
+
+  &.active {
+    > svg {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.name {
+  flex: auto;
+  padding-left: 1rem;
+  font-weight: 700;
+  font-size: 2rem;
+
+  > sup {
+    margin-left: .5rem;
+    font-size: 1.3rem;
+    color: #93A1B2;
+  }
+}

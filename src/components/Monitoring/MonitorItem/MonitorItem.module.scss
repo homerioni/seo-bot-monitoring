@@ -1,0 +1,5 @@
+.main {
+  &:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+}

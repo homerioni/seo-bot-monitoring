@@ -1,0 +1,78 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  align-items: center;
+  padding: .8rem .8rem .8rem 2rem;
+
+  > * {
+    flex: none;
+    padding-right: 1.5rem;
+
+    &:nth-child(1) {
+      padding-right: 0;
+    }
+    &:nth-child(2) {
+      width: 14.5rem;
+    }
+    &:nth-child(3) {
+      width: 44rem;
+    }
+    &:nth-child(4) {
+      width: 16rem;
+    }
+    &:nth-child(5) {
+      width: 12rem;
+    }
+    &:nth-child(6) {
+      padding-right: 0;
+    }
+  }
+
+  &.active {
+    background: rgba(135, 212, 73, 0.1);
+
+    .checkbox {
+      border: 1px solid $green;
+
+      > svg {
+        display: block;
+      }
+    }
+  }
+
+  &.hide {
+    display: none;
+  }
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1.4rem;
+  border: 1px solid #B8BED6;
+  border-radius: .6rem;
+  background-color: white;
+  cursor: pointer;
+
+  > input {
+    display: none;
+  }
+
+  > svg {
+    display: none;
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  &.active {
+    border: 1px solid $green;
+
+    > svg {
+      display: block;
+    }
+  }
+}

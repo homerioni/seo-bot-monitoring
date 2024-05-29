@@ -1,0 +1,21 @@
+@import "./src/assets/scss/param";
+
+.container {
+  width: 111rem;
+  padding: 4rem 5rem 6rem 5rem;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+  width: 100%;
+}
+
+.contentTitle {
+  flex: 100%;
+  margin-bottom: .5rem;
+  font-weight: 400;
+  font-size: 2.2rem;
+}

@@ -1,0 +1,283 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 31.8rem;
+  height: auto;
+  padding: 1.2rem 1.4rem 1.2rem 1.2rem;
+  border-radius: 2rem;
+  background-color: rgba(238, 239, 245, 0.7);
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: .8rem;
+    top: .8rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    background-color: #CACCDA;
+  }
+
+  &.ACTIVE,
+  &.active {
+    &:before {
+      background-color: $green;
+    }
+  }
+
+  &.NON_ACTIVE,
+  &.disable {
+    &:before {
+      background-color: $red;
+    }
+  }
+
+  &.PARTIALLY_ACTIVE {
+    &:before {
+      background-color: $purpleStatus;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.owner {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 100%;
+
+  &:not(:last-child) {
+    margin-right: .5rem;
+  }
+
+  &.our,
+  &.OUR {
+    display: flex;
+    background-color: $purple;
+
+    > svg {
+      width: 1.1rem;
+      height: 1.1rem;
+
+      &:first-child {
+        display: block;
+      }
+    }
+  }
+
+  &.rent,
+  &.RENT {
+    display: flex;
+    background-color: $pink;
+
+    > svg {
+      width: 1.5rem;
+      height: 1.5rem;
+
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+}
+
+.thread {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.2rem;
+  height: 2.3rem;
+  border-radius: 1.2rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white;
+
+  &:not(:last-child) {
+    margin-right: .5rem;
+  }
+
+  > span {
+    transform: translateY(1px);
+  }
+
+  &.azure {
+    background-color: $azure;
+  }
+
+  &.green {
+    background-color: $green;
+  }
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  transform: translateY(1px);
+}
+
+.ip {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  transform: translateY(1px);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: auto;
+}
+
+.desc {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  font-weight: 400;
+
+  > i {
+    font-style: normal;
+  }
+}
+
+.switch {
+  position: relative;
+  width: 5.6rem;
+  height: 2.8rem;
+  margin-left: auto;
+  border-radius: 100rem;
+  background-color: white;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: .6rem;
+    top: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    transform: translate(0, -50%);
+    border-radius: 100%;
+    border: 3px solid #B0B2C0;
+    background-color: $gray;
+    transition: transform .3s ease, background-color .3s ease, border .3s ease;
+  }
+
+  &.disable {
+    &:before {
+      border: 3px solid #C62555;
+      background-color: $red;
+    }
+  }
+
+  &.active {
+    &:before {
+      transform: translate(2.4rem, -50%);
+      border: 3px solid #78C43B;
+      background-color: $green;
+    }
+  }
+
+  &:before {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .main {
+    width: 100%;
+    padding: 2.4rem 3rem;
+    border-radius: 4rem;
+    font-size: 3.2rem;
+
+    &:before {
+      right: 1.6rem;
+      top: 1.6rem;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  .header {
+    padding-right: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .owner {
+    width: 6rem;
+    height: 3.6rem;
+    border-radius: 100rem;
+
+    &:not(:last-child) {
+      margin-right: .4rem;
+    }
+
+    &.our,
+    &.OUR {
+      > svg {
+        width: 2.2rem;
+        height: 2.2rem;
+      }
+    }
+
+    &.rent,
+    &.RENT {
+      > svg {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+
+  .thread {
+    width: 6rem;
+    height: 5rem;
+    border-radius: 2.4rem;
+    font-size: 2rem;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  .name {
+    margin-right: 1.2rem;
+  }
+
+  .ip {}
+
+  .footer {
+    gap: 3rem;
+  }
+
+  .desc {
+    gap: 1.4rem;
+
+    > i {
+      color: #A1B1C5;
+    }
+  }
+
+  .switch {
+    width: 6rem;
+    height: 3.6rem;
+
+    &:before {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "/src/assets/scss/param";
+
+.switchMin {
+  position: relative;
+  width: 3rem;
+  padding: .3rem;
+  border-radius: 100rem;
+  background-color: white;
+  box-shadow: .5rem .5rem 3rem -1rem rgba(29, 46, 58, 0.16);
+  transition: background-color .2s ease;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 100%;
+    border: .3rem solid #B0B2C0;
+    background-color: #CACCDA;
+    transition: transform .3s ease, background-color .3s ease, border .3s ease;
+  }
+
+  &.disable {
+    &:before {
+      border: .3rem solid #C62555;
+      background-color: $red;
+    }
+  }
+
+  &.active {
+    &:before {
+      transform: translateX(1.2rem);
+      border: .3rem solid #78C43B;
+      background-color: $green;
+    }
+  }
+
+  &.gray {
+    background-color: #ebecf2;
+  }
+}

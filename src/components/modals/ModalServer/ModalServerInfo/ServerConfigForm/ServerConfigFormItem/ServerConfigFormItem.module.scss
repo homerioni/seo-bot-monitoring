@@ -1,0 +1,240 @@
+@import "src/assets/scss/param";
+
+.title {
+  margin-bottom: 1.4rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  padding: 1.6rem 1.4rem;
+  border-radius: 2rem;
+  background-color: #EEEFF5;
+}
+
+.box {
+  position: relative;
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 5.2rem;
+
+  &:first-child {
+    flex: auto;
+  }
+
+  &:not(:first-child) {
+    margin-left: 3rem;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -1.6rem;
+      top: 0;
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: rgba(161, 177, 197, 0.5);
+    }
+  }
+}
+
+.infoBox {
+  position: relative;
+  flex: auto;
+  border-radius: 1.4rem;
+
+  &.active {
+    .info {
+      z-index: 3;
+    }
+
+    .list {
+      z-index: 2;
+      transform: scaleY(1);
+      box-shadow: .3rem .5rem 1.4rem 0 rgba(0,0,0,0.1);
+    }
+
+    ~ .selectBtn {
+      > svg {
+        transform: scaleY(-1);
+      }
+    }
+  }
+}
+
+.info {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 5.2rem;
+  padding: 1.3rem 0;
+  border-radius: 1.4rem;
+  background-color: white;
+}
+
+.list {
+  position: absolute;
+  left: 0;
+  top: 1.4rem;
+  width: 100%;
+  padding-top: 3.8rem;
+  max-height: 40.2rem;
+  transform: scaleY(0);
+  transform-origin: top;
+  border-radius: 1.4rem;
+  background-color: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: transform .3s ease;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 5.2rem;
+  padding: 1.3rem 0;
+  border-top: 1px solid $gray-light;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e8e8e8;
+  }
+
+  > input {
+    display: none;
+
+    &:checked ~ * {
+      color: $gray;
+    }
+  }
+}
+
+.name {
+  flex: auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 2rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.desc {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0 1rem;
+  border-left: 1px solid rgba(161, 177, 197, 0.5);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.2rem;
+
+  > p:not(:first-child) {
+    font-size: 1.4rem;
+  }
+}
+
+.selectBtn {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1.4rem;
+  background-color: #A1B1C5;
+  @include min-btn-hover;
+
+  > svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    transition: transform .3s ease;
+  }
+}
+
+.qtyBox {
+  position: relative;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 13.4rem;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 1.4rem;
+  background-color: white;
+  font-weight: 700;
+  font-size: 1.6rem;
+  user-select: none;
+
+  > input {
+    display: none;
+  }
+}
+
+.operator {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 100%;
+  background-color: #EEEFF5;
+  cursor: pointer;
+  @include min-btn-hover;
+}
+
+.ram {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 9.4rem;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 1.4rem;
+  background-color: white;
+  font-weight: 700;
+  font-size: 1.6rem;
+
+  > span {
+    color: #93A1B2;
+  }
+
+  > p {
+    transform: translateY(1px);
+  }
+}
+
+.delBtn {
+  position: static;
+
+  > button {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1.4rem;
+    background-color: white;
+  }
+
+  > div {
+    right: -1.4rem;
+    z-index: 5;
+    height: calc(100% + 3.4rem);
+    border-radius: 2rem;
+
+    > div {
+      border: 1.4rem solid #FFFFFF;
+    }
+  }
+}

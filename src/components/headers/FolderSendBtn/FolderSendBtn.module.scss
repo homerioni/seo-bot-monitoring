@@ -1,0 +1,30 @@
+@import "../../../assets/scss/param";
+
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  height: 5.2rem;
+  padding: 0 2rem;
+  border-radius: 100rem;
+  background-color: $green;
+  font-weight: 800;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: white;
+  @include btn-hover;
+
+  > span {
+    transform: translateY(2px);
+    transition: opacity .2s ease;
+  }
+
+  > svg {
+    width: 2.4rem;
+    height: 2.1rem;
+    transform: translateY(2px);
+  }
+}

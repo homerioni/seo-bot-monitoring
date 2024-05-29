@@ -1,0 +1,34 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 3.5rem;
+
+  &:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+}
+
+.flex20 {
+  flex: 17%;
+  max-width: 28.8rem;
+}
+
+.flex25 {
+  flex: 20%;
+  max-width: 37.5rem;
+}
+
+.flex50 {
+  flex: 45%;
+  max-width: 77rem;
+}
+
+.flex75 {
+  flex: 70%;
+  max-width: 116.6rem;
+}
+
+.flex100 {
+  flex: 100%;
+}

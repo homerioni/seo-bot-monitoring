@@ -1,0 +1,47 @@
+@import "src/assets/scss/param";
+
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2.4rem 1.2rem 0;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #8998AB;
+
+  > button {
+    margin: -1rem -1rem -1rem -2rem;
+    padding: 1rem 1rem 1rem 2rem;
+    transition: color .15s ease;
+
+    &.active {
+      font-weight: 700;
+      color: $black;
+    }
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+
+  > p {
+    > span:first-child {
+      font-weight: 400;
+    }
+  }
+}
+
+.content {
+  padding: 3rem 1rem 1.6rem 1rem;
+  margin-left: -1rem;
+  border-radius: 0 0 2rem 2rem;
+  background: #EEEFF5;
+}

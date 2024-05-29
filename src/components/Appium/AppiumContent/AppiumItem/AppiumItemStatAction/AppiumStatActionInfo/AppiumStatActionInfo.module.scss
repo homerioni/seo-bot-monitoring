@@ -1,0 +1,135 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: relative;
+}
+
+.minStat {
+  display: flex;
+  gap: max(.3rem, 3px);
+
+  > div {
+    position: relative;
+    width: max(.3rem, 3px);
+    height: 1.8rem;
+    border-radius: 1rem;
+    background: #A1B1C566;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      border-radius: 1rem;
+      height: calc(var(--percent) * 1%);
+      background-color: var(--color);
+    }
+  }
+
+  &:hover ~ .maxStat {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.maxStat {
+  position: absolute;
+  right: -5.6rem;
+  top: calc(100% + 2rem);
+  width: 45rem;
+  padding: .8rem;
+  border-radius: 2rem;
+  background-color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s ease;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    height: 2rem;
+  }
+
+  &:hover {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.headerStat {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding-bottom: .8rem;
+  margin-bottom: .8rem;
+  border-bottom: 1px solid #EEEFF5;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2rem;
+
+  > span {
+    transform: translateY(1px);
+  }
+
+  > svg {
+    width: 2rem;
+    height: 2rem;
+
+    path {
+      fill: var(--fill);
+      stroke: var(--stroke);
+    }
+  }
+}
+
+.contentStat {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .4rem;
+  padding-right: 1.8rem;
+}
+
+.contentStatItem {
+  width: 3.6rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  text-align: center;
+
+  > div:nth-child(2) {
+    position: relative;
+    width: 2rem;
+    height: 7.6rem;
+    border-radius: 10rem;
+    margin: .2rem auto 0 auto;
+    background-color: #EEEFF5;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      border-radius: 10rem;
+      height: calc(var(--percent) * 1%);
+      background-color: var(--color);
+    }
+  }
+}
+
+.footerStat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  letter-spacing: .04em;
+  color: #8998AB;
+}

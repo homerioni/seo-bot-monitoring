@@ -1,0 +1,90 @@
+@import "./src/assets/scss/param";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  padding: 4rem 7.7rem 5rem 7.7rem;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 2rem;
+
+  &:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+
+  > .itemTitleBox {
+    margin-bottom: -1.2rem;
+  }
+}
+
+.formItem {
+  flex: 100%;
+}
+
+.itemTitleBox {
+  display: flex;
+  align-items: center;
+  min-height: 2.2rem;
+  margin-bottom: .8rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #93A1B2;
+
+  > p {
+    transform: translateY(1px);
+  }
+}
+
+.tooltip {
+  position: relative;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-left: 1rem;
+  border-radius: 100%;
+  background-color: #EFF1F7;
+
+  &:before {
+    content: '?';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4rem;
+    color: #93A1B2;
+  }
+
+  > p {
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+    max-width: 25rem;
+    padding: .5rem 1rem;
+    border-radius: 100rem;
+    background-color: #EEEFF5;
+    text-transform: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .4s ease, opacity .4s ease;
+    cursor: default;
+  }
+
+  &:hover {
+    > p {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.settings {
+  margin-bottom: 7rem;
+}

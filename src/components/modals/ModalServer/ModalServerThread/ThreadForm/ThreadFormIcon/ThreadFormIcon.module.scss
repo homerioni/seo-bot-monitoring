@@ -1,0 +1,125 @@
+.title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 2.2rem;
+  margin-bottom: .8rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #93A1B2;
+
+  > p {
+    transform: translateY(1px);
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+  transform: translateY(.6rem);
+  cursor: pointer;
+
+  > svg {
+    width: 1.4rem;
+    height: .8rem;
+    transform: translateY(1.8rem);
+    transition: transform .25s ease;
+  }
+
+  &.active {
+    > svg {
+      transform: translateY(1.8rem) scaleY(-1);
+    }
+  }
+}
+
+.btn {
+  position: relative;
+  width: 4.4rem;
+  height: 4.4rem;
+}
+
+.icon {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 2.2rem;
+  background-color: #F3F4F8;
+  transition: background-color .3s ease;
+
+  > img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+  }
+
+  &:hover {
+    background-color: #e9eaee;
+  }
+}
+
+.list {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 2;
+  width: 100%;
+  padding-top: 2.2rem;
+  transform: scaleY(0);
+  visibility: hidden;
+  transform-origin: top;
+  border-radius: 0 0 2.2rem 2.2rem;
+  background-color: #F3F4F8;
+  transition: transform .15s ease-in-out, visibility .15s;
+
+  &.open {
+    visibility: visible;
+    transform: scaleY(1);
+  }
+
+  > label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background-color .3s ease;
+
+    > img {
+      width: 2rem;
+      height: 2rem;
+      object-fit: contain;
+    }
+
+    &.active {
+      display: none;
+    }
+
+    &:hover {
+      background-color: #e9eaee;
+    }
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.statusIcon {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: auto;
+}

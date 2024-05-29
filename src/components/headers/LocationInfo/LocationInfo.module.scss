@@ -1,0 +1,76 @@
+@import "src/assets/scss/param";
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 6.4rem;
+  padding: 0 2.8rem 0 2rem;
+  border-radius: 100rem;
+  background: rgba(221, 223, 236, 0.40);
+
+  > p {
+    margin-bottom: .4rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #93A1B2;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+
+    > svg {
+      width: 1.6rem;
+      height: 2rem;
+    }
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  height: 6.4rem;
+  padding: 0 2.5rem;
+  border-radius: 100rem;
+  background: rgba(221, 223, 236, 0.40);
+  font-weight: 700;
+  font-size: 1.6rem;
+  @include btn-hover;
+  cursor: not-allowed;
+
+  > svg {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}
+
+.map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 100%;
+  background-color: #EEEFF5;
+  transition: box-shadow .2s ease;
+
+  > svg {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    path {
+      fill: var(--fill);
+      stroke: var(--stroke);
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 1rem 1px rgba(0,0,0,0.2) inset;
+  }
+}

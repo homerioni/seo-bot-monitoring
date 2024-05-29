@@ -1,0 +1,49 @@
+@import "src/assets/scss/param";
+
+.statusBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  min-width: 3.6rem;
+  height: 3.6rem;
+  padding: 0 .6rem;
+  border-radius: 100%;
+  background-color: $gray-light;
+
+  &.ACTIVE {
+    .status {
+      background-color: $green;
+    }
+  }
+
+  &.NON_ACTIVE {
+    border: 1px solid #EB376D1A;
+    border-radius: 1.2rem;
+    background-color: #EB376D1A;
+
+    .status {
+      background-color: $red;
+    }
+  }
+
+  &.PARTIALLY_ACTIVE {
+    .status {
+      background-color: $purpleStatus;
+    }
+  }
+}
+
+.status {
+  flex: none;
+  width: .8rem;
+  height: .8rem;
+  border-radius: 100%;
+}
+
+.statusDate {
+  transform: translateY(1px);
+  font-weight: 700;
+  font-size: .8rem;
+  color: #C62555;
+}

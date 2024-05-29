@@ -1,0 +1,125 @@
+.main {
+  position: relative;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 100%;
+  background-color: white;
+  overflow: hidden;
+
+  &.high {
+    border: 1px solid rgba(184, 231, 147, 0.6);
+
+    .points i {
+      background-color: #78C33B;
+    }
+  }
+
+  &.medium {
+    border: 1px solid rgba(184, 231, 147, 0.6);
+
+    .points i {
+      background-color: #87D449;
+
+      &:nth-child(2) ~ * {
+        display: none;
+      }
+    }
+  }
+
+  &.low {
+    border: 1px solid rgba(173, 184, 255, 0.6);
+
+    .points i {
+      background-color: #8B98EE;
+
+      &:nth-child(1) ~ * {
+        display: none;
+      }
+    }
+  }
+}
+
+.points {
+  position: absolute;
+  left: 50%;
+  top: 1rem;
+  z-index: 3;
+  display: flex;
+  gap: .2rem;
+  transform: translateX(-50%);
+
+  > i {
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+  }
+}
+
+@keyframes wave {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-40%);
+  }
+}
+
+@keyframes highWave {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-42%);
+  }
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+
+  &.low {
+    bottom: -.4rem;
+    animation: 3s linear infinite wave reverse;
+
+    > svg {
+      width: 5.4rem;
+      height: 1.8rem;
+
+      &:nth-child(2) {
+        transform: translateX(-1rem);
+      }
+    }
+  }
+
+  &.medium {
+    bottom: -.6rem;
+    animation: 3s linear infinite wave reverse;
+
+    > svg {
+      width: 6.4rem;
+      height: 2.9rem;
+
+      &:nth-child(2) {
+        transform: translateX(-1rem);
+      }
+    }
+  }
+
+  &.high {
+    bottom: -1rem;
+    animation: 3s linear infinite highWave reverse;
+
+    > svg {
+      width: 8.6rem;
+      height: 4rem;
+      transform: translateX(-.5rem);
+
+      &:nth-child(2) {
+        transform: translateX(-2rem);
+      }
+    }
+  }
+}

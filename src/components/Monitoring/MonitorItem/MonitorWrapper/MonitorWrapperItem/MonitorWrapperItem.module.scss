@@ -1,0 +1,86 @@
+@import "./src/assets/scss/param";
+
+.main {
+  display: flex;
+  align-items: center;
+  padding: .8rem 0;
+  cursor: default;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #F1F2F7;
+  }
+
+  > svg {
+    flex: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: .4rem;
+  }
+}
+
+.number {
+  width: 1.8rem;
+  transform: translateY(1px);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: .04em;
+  color: #93A1B2;
+}
+
+.nameBox {
+  min-width: 10rem;
+  max-width: 16.6rem;
+  padding-right: 1rem;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.ip {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #92A1B2;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+
+  > li {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+    > svg,
+    > img {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+
+    > div {
+      margin-left: .5rem;
+      transform: translateY(1px);
+
+      > p:nth-child(2) {
+        margin-top: -1rem;
+        font-size: 1.3rem;
+        color: #92A1B2;
+      }
+    }
+
+    &:not(:last-child) {
+      &:after {
+        content: '';
+        width: .4rem;
+        height: .4rem;
+        margin: 0 1rem;
+        border-radius: 100%;
+        background-color: $gray;
+      }
+    }
+  }
+}

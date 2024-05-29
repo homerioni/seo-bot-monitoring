@@ -1,0 +1,61 @@
+.header {
+  display: flex;
+  gap: .4rem;
+  margin-bottom: 1.6rem;
+  padding: 0 1.2rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #8998AB;
+
+  > * {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    &:nth-child(1) {
+      justify-content: normal;
+      width: 7.4rem;
+      text-align: left;
+    }
+    &:nth-child(2) {
+      justify-content: normal;
+      width: 7.4rem;
+      text-align: left;
+    }
+    &:nth-child(3) {
+      flex: auto;
+    }
+    &:nth-child(4) {
+      width: 3.6rem;
+    }
+    &:nth-child(5) {
+      width: 9.2rem;
+    }
+    &:nth-child(6) {
+      width: 19.2rem;
+    }
+    &:nth-child(7) {
+      width: 25.6rem;
+    }
+    &:nth-child(8) {
+      width: 19.8rem;
+    }
+    &:nth-child(9) {
+      width: 8.4rem;
+    }
+    &:nth-child(10) {
+      width: 3.6rem;
+    }
+    &:nth-child(11) {
+      width: 12.6rem;
+    }
+    &:nth-child(12) {
+      width: 16.2rem;
+    }
+    &:nth-child(13) {
+      width: 3.6rem;
+    }
+  }
+}

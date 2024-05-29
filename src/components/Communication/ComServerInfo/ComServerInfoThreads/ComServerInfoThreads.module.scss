@@ -1,0 +1,28 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: relative;
+  min-height: 100px;
+}
+
+.item {
+  padding: 10px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $gray-light;
+  }
+
+  &.disable {
+    .details__thread-server-btn:before {
+      border: 3px solid #B0B2C0;
+      background-color: #CACCDA;
+    }
+  }
+}
+
+.recipients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 8px;
+}

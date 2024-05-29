@@ -1,0 +1,42 @@
+@import "src/assets/scss/param";
+
+.main {
+  flex: auto;
+  width: 100%;
+  border-radius: 3rem;
+  background-color: rgba(242, 242, 2347, 1);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: 1rem 2rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+
+  > span:not(.addIcon) {
+    transform: translateY(1px);
+  }
+}
+
+.addIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  background-color: $green;
+  @include btn-hover;
+
+  &:before {
+    content: '+';
+    transform: translateY(1px);
+    font-weight: 400;
+    font-size: 2.4rem;
+    color: white;
+  }
+}

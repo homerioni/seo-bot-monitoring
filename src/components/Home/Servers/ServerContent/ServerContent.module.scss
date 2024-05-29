@@ -1,0 +1,106 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  align-items: center;
+  padding: .6rem 0;
+
+  > * {
+    flex: none;
+    display: flex;
+    align-items: center;
+
+    &:nth-child(1) {
+      width: 9.6rem;
+    }
+    &:nth-child(2) {
+      width: 15.6rem;
+    }
+    &:nth-child(3) {
+      width: 15rem;
+      margin-right: 1.5rem;
+    }
+    &:nth-child(4) {
+      width: 13rem;
+    }
+    &:nth-child(5) {
+      width: 14rem;
+    }
+    &:nth-child(6) {
+      width: 30.2rem;
+    }
+    &:nth-child(7) {
+      width: 30.2rem;
+    }
+    &:nth-child(8) {
+      width: 10.2rem;
+    }
+    &:nth-child(9) {
+      width: 12.2rem;
+    }
+    &:nth-child(10) {
+      width: 9rem;
+    }
+    &:nth-child(11) {
+      flex: auto;
+      justify-content: flex-end;
+      min-width: 7rem;
+      text-align: right;
+    }
+
+    &:not(:last-child) {
+      padding-right: 1.5rem;
+    }
+  }
+}
+
+.serverName {
+  display: flex;
+  position: relative;
+  width: fit-content;
+}
+
+.serverIcons {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  transform: translateY(-50%);
+}
+
+.serverError {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 100%;
+  background-color: white;
+
+  > svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+.serverAttention {
+  position: relative;
+  left: .2rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 100%;
+  background-color: yellow;
+  box-shadow: 0 0 .2rem .2rem rgba(0,0,0,.1);
+
+  &:before {
+    content: '!';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: $black;
+  }
+}

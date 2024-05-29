@@ -1,0 +1,47 @@
+@import "./src/assets/scss/param";
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 30rem;
+  padding: .6rem .6rem .6rem 2rem;
+  border-radius: 100rem;
+  background-color: #EEEFF5;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+  }
+}
+
+.name {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 100%;
+  background-color: white;
+  @include min-btn-hover;
+
+  &.editTab {
+    > svg {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+
+  &.delTab {
+    > svg {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+}

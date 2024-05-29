@@ -1,0 +1,58 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 2rem;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+}
+
+.locationTitle {
+  order: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.locationName {
+  font-size: 2rem;
+  color: #93A1B2;
+  text-align: center;
+
+  > b {
+    color: $black;
+  }
+
+  > svg {
+    width: 2rem;
+    height: 2rem;
+    transform: translateY(.2rem);
+
+    path {
+      fill: $green;
+    }
+  }
+}
+
+.locationQty {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  transform: translateY(-.3rem);
+  font-weight: 700;
+  font-size: 1.4rem;
+
+  > svg {
+    width: 1.6rem;
+    height: 1.4rem;
+    transform: translateY(-.1rem);
+  }
+}

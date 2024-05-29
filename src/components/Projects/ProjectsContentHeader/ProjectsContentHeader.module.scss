@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  margin-bottom: 1.7rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #93A1B2;
+  text-align: center;
+  text-transform: uppercase;
+
+  > * {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:nth-child(1) {
+      justify-content: normal;
+      width: 79rem;
+      text-align: left;
+    }
+    &:nth-child(2) {
+      width: 8rem;
+    }
+    &:nth-child(3) {
+      width: 8rem;
+    }
+    &:nth-child(4) {
+      width: 12.4rem;
+    }
+    &:nth-child(5) {
+      width: 14.6rem;
+    }
+    &:nth-child(6) {
+      width: 9rem;
+    }
+    &:nth-child(7) {
+      width: 16.4rem;
+    }
+    &:nth-child(8) {
+      width: 11rem;
+    }
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+}

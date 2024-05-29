@@ -1,0 +1,46 @@
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: .5rem;
+  border-radius: 100rem;
+  border: 1px solid #EEEFF5;
+}
+
+.bg {
+  position: absolute;
+  left: .5rem;
+  top: 50%;
+  width: 11.2rem;
+  height: calc(100% - 1rem);
+  transform: translateY(-50%);
+  border-radius: 100rem;
+  background-color: #87D449;
+  transition: left .3s ease, width .3s ease;
+}
+
+.btn {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 1rem 2.6rem;
+  border-radius: 100rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-align: center;
+  transition: background-color .2s ease, color .3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(128, 128, 128, 0.1);
+  }
+
+  &.active {
+    background-color: transparent;
+    color: white;
+  }
+}

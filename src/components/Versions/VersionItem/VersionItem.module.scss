@@ -1,0 +1,147 @@
+@import "./src/assets/scss/param";
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  height: 5.1rem;
+
+  > * {
+    flex: none;
+  }
+}
+
+.version {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 5rem;
+  height: 2.8rem;
+  border-radius: 100rem;
+  background-color: white;
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: #78C33B;
+
+  &.old {
+    color: #FE6E1E;
+  }
+}
+
+.status {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background-color: $gray;
+
+  &.ACTIVE {
+    background-color: $green;
+  }
+
+  &.NON_ACTIVE {
+    background-color: $red;
+  }
+
+  &.PARTIALLY_ACTIVE {
+    background-color: $purpleStatus;
+  }
+}
+
+.name {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.ip {
+  font-size: 1.6rem;
+}
+
+.info {
+  flex: none;
+
+  > * {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+}
+
+.wait {
+  color: #8998AB;
+
+  .dots {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    width: 20px;
+    height: 4px;
+
+    > span,
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 2px;
+      border-radius: 100%;
+      background-color: #A1B1C5;
+    }
+
+    > span {
+      animation: 1s linear .3s infinite wait-dots;
+    }
+
+    &:before {
+      animation: 1s linear 0s infinite wait-dots;
+    }
+
+    &:after {
+      animation: 1s linear .6s infinite wait-dots;
+    }
+
+    @keyframes wait-dots {
+      0% {
+        width: 2px;
+        height: 2px;
+      }
+      1% {
+        width: 4px;
+        height: 4px;
+      }
+      34% {
+        width: 4px;
+        height: 4px;
+      }
+      35% {
+        width: 2px;
+        height: 2px;
+      }
+      100% {
+        width: 2px;
+        height: 2px;
+      }
+    }
+  }
+}
+
+.success {
+  color: #78C33B;
+
+  > svg {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}
+
+.error {
+  color: #EB376D;
+
+  > svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}

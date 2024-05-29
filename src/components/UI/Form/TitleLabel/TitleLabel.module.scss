@@ -1,0 +1,64 @@
+@import "src/assets/scss/param";
+
+.titleBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 2.2rem;
+  margin-bottom: .8rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #93A1B2;
+
+  > p {
+    transform: translateY(1px);
+  }
+}
+
+.tooltip {
+  position: relative;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 100%;
+  background-color: #EFF1F7;
+
+  &:before {
+    content: '?';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4rem;
+    color: #93A1B2;
+  }
+
+  > p {
+    position: absolute;
+    left: 50%;
+    bottom: 130%;
+    z-index: 3;
+    width: max-content;
+    max-width: 35rem;
+    padding: .5rem 1rem;
+    transform: translateX(-50%);
+    border-radius: 1.5rem;
+    background-color: #EEEFF5;
+    text-transform: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .4s ease, opacity .4s ease;
+    cursor: default;
+    text-align: center;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:hover {
+    > p {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

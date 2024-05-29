@@ -1,0 +1,113 @@
+@import "./src/assets/scss/param";
+
+.titleBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 2.2rem;
+  margin-bottom: .8rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #93A1B2;
+
+  > p {
+    transform: translateY(1px);
+  }
+}
+
+.labelBox {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  height: 5.7rem;
+
+  > p {
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+}
+
+.label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+  border-radius: 2rem;
+  background: rgb(241, 241, 246);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: .02em;
+  cursor: pointer;
+
+  > input {
+    width: 100%;
+    height: 100%;
+
+    &::placeholder {
+      color: #92A1B2;
+    }
+  }
+
+  &.error {
+    background-color: rgba(235, 55, 109, 0.2);
+    color: $red;
+  }
+
+  &.change {
+    background-color: rgba(170, 224, 127, 0.3);
+  }
+}
+
+.switchBtn {
+  flex: none;
+  position: relative;
+  width: 6.6rem;
+  height: 3.6rem;
+  border-radius: 100rem;
+  background-color: #EEEFF5;
+  box-shadow: .5rem .5rem 3rem -1rem rgba(29, 46, 58, 0.16);
+  transition: background-color .2s ease;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: .6rem;
+    top: 50%;
+    width: 2.4rem;
+    height: 2.4rem;
+    transform: translate(0, -50%);
+    border-radius: 100%;
+    border: 3px solid #8998AB;
+    background-color: #A1B1C5;
+    transition: transform .3s ease, background-color .3s ease, border .3s ease;
+  }
+
+  &.disable {
+    &:before {
+      border: 3px solid #C62555;
+      background-color: $red;
+    }
+  }
+
+  &.active {
+    &:before {
+      transform: translate(3rem, -50%);
+      border: 3px solid #78C43B;
+      background-color: $green;
+    }
+  }
+
+  > input {
+    display: none;
+  }
+}

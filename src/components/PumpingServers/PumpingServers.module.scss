@@ -1,0 +1,17 @@
+.contentList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}

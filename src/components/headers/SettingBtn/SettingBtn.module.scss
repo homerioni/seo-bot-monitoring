@@ -1,0 +1,17 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 100%;
+  background-color: #EEEFF5;
+  @include btn-hover;
+
+  > svg {
+    width: 2.4rem;
+    height: 2.2rem;
+  }
+}

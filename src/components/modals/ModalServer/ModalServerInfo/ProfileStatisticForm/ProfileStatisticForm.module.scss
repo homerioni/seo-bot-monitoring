@@ -1,0 +1,31 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 3.5rem;
+}
+
+.flex{
+  &15 {
+    flex: 13%;
+    max-width: 22.8rem;
+  }
+  &33 {
+    flex: 30%;
+    max-width: 50.6rem;
+  }
+  &100 {
+    flex: 100%;
+  }
+}
+
+.buttons {
+  flex: 100%;
+  margin-top: 6rem;
+}
+
+.delBtn {
+  z-index: 5;
+  margin-top: auto;
+  height: 5.7rem;
+}

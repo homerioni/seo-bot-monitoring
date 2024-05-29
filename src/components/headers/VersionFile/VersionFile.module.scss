@@ -1,0 +1,33 @@
+@import "./src/assets/scss/param";
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+
+  > input {
+    display: none;
+  }
+
+  &:not(:last-child) {
+    margin-right: 5rem !important;
+  }
+}
+
+.icon {
+  width: 5.7rem;
+  height: 5.7rem;
+}
+
+.title {
+  display: block;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.name {
+  display: block;
+  font-weight: 700;
+  font-size: 2rem;
+}

@@ -1,0 +1,77 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  margin-right: .4rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.qtyBox {
+  display: flex;
+  align-items: flex-end;
+  transform: translateY(-1px);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #8998AB;
+
+  > svg {
+    margin: 0 .4rem;
+  }
+
+  > span:last-child {
+    transform: translateY(1px);
+  }
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  margin-right: .6rem;
+  border-radius: 100%;
+  background-color: white;
+  box-shadow: 2rem 3rem 7rem 0 #6873BE52;
+
+  > svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.configQty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: .4rem;
+  border-radius: 100%;
+  background-color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #8998AB;
+}
+
+.repairBox {
+  display: flex;
+  margin-right: .4rem;
+  transform: translateY(-.2rem);
+}
+
+.repairIcon {
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid $gray-light;
+  border-radius: 100%;
+
+  & ~ .repairIcon {
+    margin-left: -.6rem;
+  }
+}

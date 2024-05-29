@@ -1,0 +1,181 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleBox {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  min-height: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.color {
+  width: 1.4rem;
+  height: 1.4rem;
+  border: .2rem solid #EEEFF5;
+  border-radius: 100%;
+  background-color: var(--color);
+}
+
+.ramQty {
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: .6rem;
+  border-radius: 100%;
+  background-color: #EEEFF5;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: #8998AB;
+
+  > i {
+    font-style: normal;
+    font-size: .8rem;
+    text-transform: uppercase;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.price {
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.serversQtyBox {
+  position: relative;
+  width: 100%;
+  padding-right: 2.8rem;
+  margin-bottom: 1.5rem;
+
+  > span {
+    margin: 0 .2rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #A1B1C5;
+  }
+}
+
+.serversQty {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.3rem;
+
+  > svg {
+    width: 1.2rem;
+    height: 1rem;
+    margin-right: .4rem;
+  }
+}
+
+.percentServers {
+  display: inline;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--color);
+}
+
+.infoBox {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 1.8rem;
+  height: 1.8rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  > svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.percentStat {
+  width: 100%;
+  height: 1.2rem;
+  padding: .2rem;
+  border-radius: 2rem;
+  background-color: #EEEFF5;
+
+  > span {
+    display: block;
+    height: 100%;
+    border-radius: 100rem;
+    background-color: var(--color);
+  }
+}
+
+@media (max-width: 48em) {
+  .titleBox {
+    gap: 1.2rem;
+    margin-bottom: .6rem;
+  }
+
+  .color {
+    width: 2.8rem;
+    height: 2.8rem;
+    border: .4rem solid white;
+  }
+
+  .ramQty {
+    width: 3.6rem;
+    height: 3.6rem;
+    padding: 1rem;
+    font-size: 2rem;
+
+    > i {
+      font-size: 1.4rem;
+    }
+  }
+
+  .title {
+    transform: translateY(1px);
+    font-size: 2.8rem;
+  }
+
+  .price {
+    margin-bottom: 1.8rem;
+    font-size: 2.8rem;
+  }
+
+  .serversQtyBox {
+    padding-right: 6rem;
+    margin-bottom: 1.6rem;
+
+    > span {
+      margin: 0 .8rem;
+      font-size: 2.8rem;
+    }
+  }
+
+  .serversQty {
+    font-size: 2.8rem;
+
+    > svg {
+      width: 2.4rem;
+      height: 2rem;
+      margin-right: .6rem;
+    }
+  }
+
+  .percentServers {
+    font-size: 2.8rem;
+  }
+
+  .infoBox {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .percentStat {
+    height: 2rem;
+    padding: .4rem;
+    border-radius: 4rem;
+  }
+}

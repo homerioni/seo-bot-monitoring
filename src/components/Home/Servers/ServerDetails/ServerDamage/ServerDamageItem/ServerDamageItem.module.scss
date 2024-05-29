@@ -1,0 +1,115 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 53.6rem;
+  padding: .4rem .4rem .4rem 2rem;
+  border-radius: 100rem;
+  background-color: rgba(91, 194, 255, 0.13);
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+
+    &:not(:last-child) {
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: calc(100% + 1.1rem);
+        top: 50%;
+        width: 1px;
+        height: calc(100% - .8rem);
+        transform: translateY(-50%);
+        background-color: #BED4E1;
+      }
+    }
+  }
+}
+
+.editBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 100%;
+  background-color: white;
+  @include min-btn-hover;
+
+  > svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: .6rem 2.4rem;
+  border-radius: 100rem;
+  background-color: white;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+
+    > svg {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+
+    &:not(:last-child) {
+      position: relative;
+
+      &:after {
+        content: '/';
+        position: absolute;
+        left: calc(100% + .7rem);
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 400;
+        font-size: 1.6rem;
+        color: #A1B1C5;
+      }
+    }
+  }
+}
+
+.delBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 100%;
+  background-color: white;
+  @include min-btn-hover;
+
+  > svg {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}

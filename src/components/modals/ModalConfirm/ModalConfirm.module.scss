@@ -1,0 +1,104 @@
+@import "./src/assets/scss/param";
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.red {
+    .icon,
+    .buttons > .confirm {
+      background-color: $red;
+    }
+  }
+
+  &.green {
+    .icon,
+    .buttons > .confirm {
+      background-color: $green;
+    }
+  }
+
+  &.gray {
+    .icon {
+      background-color: $green;
+    }
+
+    .buttons > .confirm {
+      color: #393B44;
+      background-color: #EEEFF5;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 92rem;
+  padding: 4rem 4rem 5rem 4rem;
+  border-radius: 5rem;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.2rem;
+  height: 7.2rem;
+  margin-bottom: 1.8rem;
+  border-radius: 100%;
+  background-color: $red;
+
+  > svg {
+    width: 2.2rem;
+    height: 3rem;
+
+    path {
+      fill: white;
+    }
+  }
+}
+
+.title {
+  margin-bottom: 4.4rem;
+  font-size: 2.5rem;
+  line-height: 3.7rem;
+  text-align: center;
+
+  > b {
+    font-weight: 700;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 19.4rem;
+  height: 6rem;
+  padding: .6rem 2rem;
+  border-radius: 100rem;
+  background-color: #EEEFF5;
+  font-weight: 800;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  @include btn-hover;
+
+  &.confirm {
+    color: white;
+  }
+
+  &.gray {
+    color: #393B44 !important;
+    background-color: #EEEFF5 !important;
+  }
+}

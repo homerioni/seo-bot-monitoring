@@ -1,0 +1,57 @@
+@import "src/assets/scss/param";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.infoBox {
+  display: flex;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+
+  > i {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    transform: translateY(-1px);
+    margin-right: 1rem;
+    border-radius: 100%;
+  }
+
+  &:nth-child(1) > i {
+    background-color: $green;
+  }
+
+  &:nth-child(2) > i {
+    background-color: $azure;
+  }
+
+  &:nth-child(3) > i {
+    background-color: $gray;
+  }
+
+  > b {
+    margin-right: .4rem;
+  }
+
+  > span {
+    font-weight: 400;
+  }
+
+  &:not(:last-child) {
+    &:after {
+      content: '/';
+      margin: 0 1.2rem;
+      color: #A1B1C5;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "src/assets/scss/param";
+
+.wrapper {
+  display: flex;
+  padding: 8px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $gray-light;
+  }
+}
+
+.item {
+  &:not(:last-child) {
+    padding-right: 12px;
+  }
+
+  &.flex25 {
+    flex: 22%;
+    max-width: 129px;
+  }
+
+  &.flex50 {
+    flex: 45%;
+    max-width: 258px;
+  }
+  &.flex75 {
+    flex: 70%;
+    max-width: 387px;
+  }
+}
+
+.title {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #93A1B2;
+}
+
+.desc {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}

@@ -1,0 +1,28 @@
+.stats {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.index {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.textBox {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+
+  > p:not(:last-child) {
+    &:after {
+      content: '/';
+      display: inline-block;
+      transform: translateY(-1px);
+      margin-left: .8rem;
+      color: #A1B1C5;
+    }
+  }
+}

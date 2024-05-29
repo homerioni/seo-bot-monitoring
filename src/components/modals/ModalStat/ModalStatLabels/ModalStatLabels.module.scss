@@ -1,0 +1,27 @@
+.labels {
+  position: absolute;
+  left: -1.4rem;
+  bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  transform: translateX(-100%);
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  text-align: right;
+  color: #93A1B2;
+
+  > * {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: -1.3rem;
+      top: 50%;
+      width: 114.2rem;
+      transform: translate(100%, -50%);
+      border-bottom: 1px solid #DDDFEC;
+    }
+  }
+}

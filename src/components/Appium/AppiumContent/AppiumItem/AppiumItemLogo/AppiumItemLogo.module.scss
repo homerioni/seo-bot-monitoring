@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8.4rem;
+  height: 3.6rem;
+  border: 2px solid #DDDFEC;
+  border-radius: 100rem;
+  background-color: #A1B1C5;
+
+  &.active {
+    border: 2px solid #ADB8FF;
+    background-color: #8B98EE;
+  }
+}

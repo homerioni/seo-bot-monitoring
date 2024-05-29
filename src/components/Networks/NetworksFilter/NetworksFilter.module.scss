@@ -1,0 +1,41 @@
+@media (max-width: 48em) {
+  .main {
+    position: relative;
+    display: flex;
+    gap: .8rem;
+    width: fit-content;
+    margin: 0 auto;
+    padding: .8rem;
+    border-radius: 100rem;
+    background-color: #EEEFF5;
+  }
+
+  .bg {
+    position: absolute;
+    left: .5rem;
+    top: 50%;
+    width: 20.5rem;
+    height: calc(100% - 1rem);
+    transform: translateY(-50%);
+    border-radius: 100rem;
+    background-color: #87D449;
+    transition: left .3s ease, width .3s ease;
+  }
+
+  .btn {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    height: 8.4rem;
+    padding: 0 4.2rem;
+    border-radius: 100rem;
+    font-weight: 700;
+    font-size: 3.2rem;
+    transition: color .3s ease;
+
+    &.active {
+      color: white;
+    }
+  }
+}

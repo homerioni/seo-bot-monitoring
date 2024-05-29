@@ -1,0 +1,11 @@
+.container {
+  width: 68rem;
+  padding: 3rem 2rem 2rem 2rem;
+}
+
+@media (max-width: 48em) {
+  .container {
+    width: 100%;
+    padding: 3.2rem;
+  }
+}

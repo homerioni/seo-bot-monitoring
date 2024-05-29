@@ -1,0 +1,86 @@
+@import "./src/assets/scss/param";
+
+.item {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.itemName {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #93A1B2;
+}
+
+.icon {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.8rem;
+  height: 5.8rem;
+  border-radius: 2rem;
+  background-color: white;
+
+  > * {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+  }
+}
+
+.nameBox {
+  width: 100%;
+}
+
+.name {
+  width: 100%;
+  height: 5.8rem;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 2rem;
+  background-color: white;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: .02em;
+}
+
+.del {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.8rem;
+  height: 5.8rem;
+  border-radius: 2rem;
+  background-color: #DFE1EB;
+  @include btn-hover;
+
+  > svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
+.edit {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.8rem;
+  height: 5.8rem;
+  border-radius: 2rem;
+  background-color: #DFE1EB;
+  @include btn-hover;
+
+  > svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}

@@ -1,0 +1,47 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 5rem;
+}
+
+.buttons {
+  flex: 100% 1;
+  display: flex;
+  gap: 2rem;
+}
+
+.formBox {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 3rem;
+  column-gap: 2rem;
+  width: 100%;
+}
+
+.boxTitle {
+  flex: 100%;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+.flex25 {
+  flex: 22%;
+  max-width: 38.8rem;
+}
+
+.flex33 {
+  flex: 30%;
+  max-width: 52.7rem;
+}
+
+.flex50 {
+  flex: 45%;
+}
+
+.flex100 {
+  flex: 100%;
+}
+
+.textarea {
+  height: 40rem;
+}

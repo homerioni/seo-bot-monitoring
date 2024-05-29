@@ -1,0 +1,89 @@
+@import "./src/assets/scss/param";
+
+.main {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.4rem;
+  cursor: pointer;
+
+  &.hide {
+    .monitoring__item-title-box > svg {
+      transform: scaleY(-1);
+    }
+  }
+}
+
+.titleBox {
+  display: flex;
+  align-items: center;
+  width: 15.2rem;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 3rem;
+
+  > svg {
+    flex: none;
+    width: 1.2rem;
+    height: .8rem;
+    margin-right: 1.4rem;
+    transition: transform .3s ease;
+
+    path {
+      stroke: #92A1B2;
+    }
+
+    &.closed {
+      transform: scaleY(-1);
+    }
+  }
+
+  > span {
+    transform: translateY(1px);
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  width: 24.4rem;
+
+  > li {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+    > svg,
+    > img {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+
+    > div {
+      margin-left: .5rem;
+      transform: translateY(1px);
+
+      > p:nth-child(2) {
+        margin-top: -1rem;
+        font-size: 1.3rem;
+        color: #92A1B2;
+      }
+    }
+
+    &:not(:last-child) {
+      &:after {
+        content: '';
+        width: .4rem;
+        height: .4rem;
+        margin: 0 1rem;
+        border-radius: 100%;
+        background-color: $gray;
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    margin-left: auto;
+  }
+}

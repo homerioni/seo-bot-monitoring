@@ -1,0 +1,12 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .4rem;
+  height: 3.6rem;
+  padding: .6rem;
+  border-radius: 100rem;
+  background-color: #EEEFF5;
+}

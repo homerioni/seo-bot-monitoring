@@ -1,0 +1,41 @@
+.main {
+  width: 18.2rem;
+
+  &:not(:last-child) {
+    padding-right: 1.4rem;
+  }
+
+  &.big {
+    width: 27rem;
+  }
+
+  &.flex-30 {
+    flex: 30%;
+    max-width: 54.6rem;
+
+    &:not(:last-child) {
+      padding-right: 2rem;
+    }
+  }
+
+  b {
+    font-weight: 800;
+    color: #393B44;
+  }
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #93A1B2;
+}
+
+.desc {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}

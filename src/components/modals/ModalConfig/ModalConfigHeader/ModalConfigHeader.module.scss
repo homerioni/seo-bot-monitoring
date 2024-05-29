@@ -1,0 +1,32 @@
+@import "src/assets/scss/param";
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 5rem;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.2rem;
+  height: 7.2rem;
+  border-radius: 100%;
+  background-color: $green;
+
+  > svg {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  &.edit {
+    background-color: $azure;
+  }
+}
+
+.title {
+  font-weight: 400;
+  font-size: 3rem;
+}

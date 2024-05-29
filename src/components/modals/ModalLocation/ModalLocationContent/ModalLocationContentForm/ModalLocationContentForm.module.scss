@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.flex25 {
+  flex: 23%;
+  max-width: 37.5rem;
+}
+
+.delBtn {
+  flex: none;
+  position: relative;
+  z-index: 1;
+  width: 5.8rem;
+  height: 5.8rem;
+  margin-top: auto;
+}

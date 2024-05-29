@@ -1,0 +1,21 @@
+.titleBox {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 5rem;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.2rem;
+  height: 7.2rem;
+  border-radius: 100%;
+}
+
+.title {
+  transform: translateY(1px);
+  font-size: 3rem;
+  line-height: 4.4rem;
+}

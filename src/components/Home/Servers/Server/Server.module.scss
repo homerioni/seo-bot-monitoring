@@ -1,0 +1,49 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: relative;
+  font-size: 1.6rem;
+  cursor: pointer;
+  isolation: isolate;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: 0;
+    z-index: -1;
+    width: calc(100% + 2rem);
+    height: 100%;
+    border-bottom: 1px solid white;
+    border-radius: 2.7rem;
+    transition: background-color .15s ease, box-shadow .15s ease;
+  }
+
+  &:hover {
+    &:before {
+      background-color: rgba(256,256,256,0.4);
+    }
+  }
+
+  &.active {
+    z-index: 3;
+    font-weight: 700;
+
+    &:before {
+      background-color: white;
+      box-shadow: 1rem 1rem 4rem 0 #2229531A;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid transparent;
+    }
+  }
+
+  &.upper {
+    z-index: 2;
+  }
+
+  &.closing {
+    z-index: 1;
+  }
+}

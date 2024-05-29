@@ -1,0 +1,102 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .5rem 0;
+  font-size: 1.6rem;
+  cursor: pointer;
+  isolation: isolate;
+
+  > * {
+    flex: none;
+
+    &:nth-child(1) {
+      width: 7.6rem;
+    }
+    &:nth-child(2) {
+      width: 25rem;
+    }
+    &:nth-child(3) {
+      width: 18rem;
+    }
+    &:nth-child(4) {
+      width: 10rem;
+    }
+    &:nth-child(5) {
+      width: 6rem;
+    }
+    &:nth-child(6) {
+      width: 6.6rem;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: 0;
+    z-index: -1;
+    width: calc(100% + 2rem);
+    height: 100%;
+    border-bottom: 1px solid white;
+    border-radius: 2.7rem;
+    transition: background-color .15s ease, box-shadow .15s ease;
+  }
+
+  &:hover {
+    &:before {
+      background-color: rgba(256,256,256,0.4);
+    }
+  }
+
+  &.active {
+    z-index: 3;
+    font-weight: 700;
+
+    &:before {
+      background-color: white;
+      box-shadow: 1rem 1rem 4rem 0 #2229531A;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid transparent;
+    }
+  }
+
+  &.upper {
+    z-index: 2;
+  }
+
+  &.closing {
+    z-index: 1;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.editBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 100%;
+  background-color: white;
+  @include min-btn-hover;
+
+  > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.name {
+  font-weight: 700;
+}

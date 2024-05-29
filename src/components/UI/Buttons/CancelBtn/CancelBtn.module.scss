@@ -1,0 +1,20 @@
+@import "src/assets/scss/param";
+
+.cancel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.8rem 3.8rem;
+  border-radius: 100rem;
+  background-color: rgba(238, 239, 245, 0.7);
+  font-weight: 800;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  @include btn-hover;
+
+  span {
+    transform: translateY(1px);
+  }
+}

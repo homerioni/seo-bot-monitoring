@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.8rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #93A1B2;
+  text-transform: uppercase;
+
+  > * {
+    flex: none;
+
+    &:nth-child(1) {
+      flex: auto;
+    }
+    &:nth-child(3) {
+      width: 9.4rem;
+      text-align: center;
+    }
+    &:nth-child(4) {
+      width: 9.4rem;
+      text-align: center;
+    }
+    &:nth-child(5) {
+      width: 9.4rem;
+      text-align: center;
+    }
+  }
+}

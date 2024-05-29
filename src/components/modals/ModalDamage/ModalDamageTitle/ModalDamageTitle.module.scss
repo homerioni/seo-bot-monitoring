@@ -1,0 +1,37 @@
+@import "src/assets/scss/param";
+
+.titleBox {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 5rem;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 100%;
+  background-color: $green;
+
+  > svg {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+}
+
+.title {
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.desc {
+  margin-top: -.5rem;
+  font-size: 1.8rem;
+
+  .gray {
+    color: #92A1B2;
+  }
+}

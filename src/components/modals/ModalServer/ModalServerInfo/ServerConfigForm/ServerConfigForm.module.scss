@@ -1,0 +1,54 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 6rem;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 3.6rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0;
+}
+
+.flexBox {
+  flex: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1.4rem;
+  column-gap: 2rem;
+
+  > *:not(.title, .addBtn) {
+    flex: 45%;
+    max-width: 77rem;
+  }
+}
+
+.title {
+  flex: 100%;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.flex100 {
+  flex: 100%;
+}
+
+.flex50 {
+  flex: 45%;
+  max-width: 77rem;
+}
+
+.flex33 {
+  flex: 30%;
+  max-width: 50.6rem;
+}

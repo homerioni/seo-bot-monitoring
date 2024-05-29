@@ -1,0 +1,75 @@
+@import "src/assets/scss/param";
+
+@keyframes showHeader {
+  0% {
+    transform: translateY(500px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.header {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .6rem;
+  border-radius: 10rem;
+  background-color: $gray-light;
+  font-weight: 700;
+  font-size: 1.6rem;
+  animation: showHeader .5s ease;
+
+  > div {
+    display: flex;
+    align-items: center;
+
+    &:nth-child(2) {
+      > div:first-child {
+        order: 3;
+        margin-left: 1rem;
+        margin-right: 0;
+      }
+    }
+  }
+
+  > button:first-child {
+    margin-left: 0;
+  }
+}
+
+.close {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  margin-left: auto;
+  border-radius: 100%;
+  background-color: $gray;
+  @include btn-hover;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1.6rem;
+    height: 2px;
+    border-radius: 100rem;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: white;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1.6rem;
+    height: 2px;
+    border-radius: 100rem;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    background-color: white;
+  }
+}

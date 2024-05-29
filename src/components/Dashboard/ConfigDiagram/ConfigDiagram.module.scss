@@ -1,0 +1,13 @@
+.main {
+  position: relative;
+  border-radius: 3rem;
+  padding: 1rem 2rem 2rem 2rem;
+  background-color: #EEEFF5;
+}
+
+@media (max-width: 48em) {
+  .main {
+    border-radius: 5rem;
+    padding: 4rem 3.2rem;
+  }
+}

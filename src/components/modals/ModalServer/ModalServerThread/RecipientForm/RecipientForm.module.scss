@@ -1,0 +1,30 @@
+.title {
+  flex: 100%;
+  position: relative;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+
+  span {
+    display: block;
+    margin-top: -.5rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 3.5rem;
+}
+
+.addBtn {
+  order: 10;
+}

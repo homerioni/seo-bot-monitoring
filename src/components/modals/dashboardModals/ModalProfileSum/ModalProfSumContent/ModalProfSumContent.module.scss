@@ -1,0 +1,16 @@
+.title {
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #93A1B2;
+  text-transform: uppercase;
+}
+
+@media (max-width: 48em) {
+  .title {
+    padding-left: 0;
+    margin-bottom: 2.4rem;
+    font-size: 2rem;
+  }
+}

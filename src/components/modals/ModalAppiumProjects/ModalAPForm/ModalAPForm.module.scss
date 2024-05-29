@@ -1,0 +1,54 @@
+@import "src/assets/scss/param";
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+
+  > * {
+    flex: 45%;
+    max-width: 44.2rem;
+
+    &:last-child {
+      flex: 100%;
+      max-width: none;
+    }
+
+    &.checkbox {
+      flex: 100%;
+      max-width: none;
+      margin-top: -3rem;
+    }
+  }
+}
+
+.formTitle {
+  margin-bottom: -1.5rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.flexBox {
+  display: flex;
+  gap: 4rem;
+}
+
+.searchInput {
+  width: 31.4rem;
+}
+
+.input {
+  width: 46rem;
+}
+
+.inputMaxLength {
+  width: 20rem;
+
+  > div:nth-child(2) {
+    width: 7rem;
+
+    input {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.main {
+  width: 100%;
+  border-radius: 3rem;
+  background-color: #EEEFF5;
+}
+
+@media (max-width: 48em) {
+  .main {
+    border-radius: 5rem 0 0 5rem;
+  }
+}

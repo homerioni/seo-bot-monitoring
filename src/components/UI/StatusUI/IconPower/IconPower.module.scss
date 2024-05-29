@@ -1,0 +1,25 @@
+@import "src/assets/scss/param";
+
+.power {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.2rem;
+  height: 2.3rem;
+  border-radius: 1.2rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white;
+
+  > span {
+    transform: translateY(1px);
+  }
+
+  &.azure {
+    background-color: $azure;
+  }
+
+  &.green {
+    background-color: $green;
+  }
+}

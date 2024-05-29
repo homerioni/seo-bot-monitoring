@@ -1,0 +1,31 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+  height: 3.6rem;
+  padding: .6rem;
+  border-radius: 10rem;
+  background-color: $gray-light;
+
+  > div {
+    display: flex;
+    align-items: flex-start;
+    padding: .6rem;
+    border-radius: 10rem;
+    background-color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+
+    > sup {
+      font-size: .8rem;
+    }
+
+    > svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      margin-right: .3rem;
+    }
+  }
+}

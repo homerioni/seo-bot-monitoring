@@ -1,0 +1,30 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+
+  > input {
+    display: none;
+  }
+}
+
+.item {
+  padding-bottom: .4rem;
+  border-bottom: 2px solid transparent;
+  font-weight: 700;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: color .15s ease;
+
+  &:hover {
+    color: #8B98EE;
+  }
+
+  &.active {
+    border-bottom: 2px solid #8B98EE;
+    color: #8B98EE;
+  }
+}

@@ -1,0 +1,84 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  align-items: center;
+  height: 3.6rem;
+  gap: 1.4rem;
+  padding: .3rem .3rem .3rem 1.6rem;
+  border-radius: 100rem;
+  background-color: white;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  height: 100%;
+  padding: 0 1.2rem;
+  border-radius: 100rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  white-space: nowrap;
+  cursor: pointer;
+  --color: #393B44;
+
+  &:has(> input:checked) {
+    background-color: $green;
+    color: white;
+    --color: white;
+  }
+
+  > input {
+    display: none;
+  }
+
+  > svg {
+    width: 1rem;
+    height: 1.1rem;
+  }
+
+  &:hover {
+    background-color: rgba(57, 59, 68, 0.1);
+  }
+}
+
+@media (max-width: 48em) {
+  .main {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    width: 100%;
+    height: 8rem;
+    padding: .8rem .8rem .8rem 3.2rem;
+  }
+
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .buttons {
+  }
+
+  .btn {
+    gap: .6rem;
+    padding: 0 3.2rem;
+    font-size: 2.8rem;
+
+    > svg {
+      width: 2rem;
+      height: 2.2rem;
+    }
+  }
+}

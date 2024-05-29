@@ -1,0 +1,16 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+
+  > * {
+    flex: 100%;
+    width: 100%;
+  }
+}
+
+.submit {
+  flex: 100%;
+  width: fit-content;
+  padding: .6rem;
+}

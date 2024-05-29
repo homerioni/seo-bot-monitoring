@@ -1,0 +1,15 @@
+
+.container {
+  width: 170rem;
+  padding: 7rem;
+}
+
+.content {
+  margin-bottom: 7rem;
+
+  > div:not(:last-child) {
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgba(161, 177, 197, 0.3);
+  }
+}

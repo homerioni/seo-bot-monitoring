@@ -1,0 +1,33 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 10px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $gray-light;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 160px;
+  padding: 4px 12px 4px 4px;
+  border: 1px solid #87D449;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+
+  > p {
+    transform: translateY(1px);
+  }
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+}

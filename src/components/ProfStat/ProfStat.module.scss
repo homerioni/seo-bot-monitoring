@@ -1,0 +1,41 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.pages {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin: 0 auto;
+
+  > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    background-color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    transition: background-color .3s ease;
+    cursor: pointer;
+
+    &:not(.active) {
+      @include min-btn-hover;
+    }
+
+    &.active {
+      background-color: #8b98ee;
+      color: white;
+    }
+
+    > span {
+      transform: translateY(1px);
+    }
+  }
+}

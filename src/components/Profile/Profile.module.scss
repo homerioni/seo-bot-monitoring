@@ -1,0 +1,49 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% + 3rem);
+  height: calc(100% + 4rem);
+  margin: -2rem -1rem -2rem -2rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.title {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.nameBox {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.name {}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.6rem;
+  height: 6.6rem;
+  border-radius: 100%;
+  background-color: $green;
+
+  > svg {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.role {
+  font-weight: 400;
+  font-size: 1.6rem;
+}

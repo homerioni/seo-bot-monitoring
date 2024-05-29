@@ -1,0 +1,44 @@
+.main {
+  display: flex;
+  gap: .8rem;
+  padding: .7rem 0;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.qtyBox {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #8998AB;
+
+  > svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+.textBox {
+  display: flex;
+  align-items: center;
+  gap: 2.1rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+
+  > p:not(:first-child) {
+    position: relative;
+
+    &:before {
+      content: '/';
+      position: absolute;
+      left: -1.2rem;
+      top: 50%;
+      transform: translateY(-60%);
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #A1B1C5;
+    }
+  }
+}

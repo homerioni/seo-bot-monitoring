@@ -1,0 +1,55 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 3.5rem;
+
+  &:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+}
+
+.formList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.flex33 {
+  flex: 30%;
+  max-width: 50.6rem;
+}
+
+.title {
+  flex: 100%;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+.serverForm {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+}
+
+.addBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 5rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+
+  > p {
+    transform: translateY(1px);
+  }
+}
+
+.delBtn {
+  z-index: 1;
+  margin-top: auto;
+  width: 5.7rem;
+  height: 5.7rem;
+}

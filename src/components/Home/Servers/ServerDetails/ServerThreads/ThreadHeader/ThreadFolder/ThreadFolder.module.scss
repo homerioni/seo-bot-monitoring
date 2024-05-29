@@ -1,0 +1,146 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin-left: 1.6rem;
+  padding: .4rem .6rem .4rem 1.6rem;
+  border-radius: 100rem;
+  background-color: rgba(91, 194, 255, 0.13);
+}
+
+.text {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.dist {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  transform: translateY(1px);
+
+  &.hasDistribution {
+    .send {
+      display: flex;
+    }
+
+    .details__folder-del {
+      display: block;
+    }
+  }
+}
+
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  height: 3.6rem;
+  padding: .8rem 2rem;
+  margin-bottom: .1rem;
+  border-radius: 100rem;
+  background-color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+  @include min-btn-hover;
+
+  &.send {
+    > svg {
+      flex: none;
+      width: 2.4rem;
+      height: 2.1rem;
+    }
+  }
+
+  &.edit {
+    > svg {
+      flex: none;
+      width: 1.2rem;
+      height: 1.2rem;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.delBtn {
+  width: 3.6rem;
+  height: 3.6rem;
+  padding: .8rem;
+  border-radius: 100%;
+  background-color: white;
+  transition: background-color .25s ease;
+
+  &:hover {
+    background-color: $red;
+
+    > svg path {
+      fill: white;
+    }
+  }
+
+  > svg {
+    width: 100%;
+    height: 100%;
+
+    path {
+      transition: fill .25s ease;
+    }
+  }
+}
+
+.infoBox {
+  position: relative;
+
+  &:hover {
+    .info {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.infoIcon {
+  width: 2rem;
+  height: 2rem;
+  transform: translateY(2px);
+  margin-left: -.6rem;
+  cursor: pointer;
+}
+
+.info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: max-content;
+  min-width: 5rem;
+  max-width: 26rem;
+  padding: 1.4rem 1rem;
+  transform: translate(-1.8rem, calc(-100% - 1rem));
+  border-radius: 1.2rem;
+  background-color: $black;
+  box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .25s, opacity .25s ease;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 2rem;
+    top: 100%;
+    width: .6rem;
+    height: .6rem;
+    background-color: $black;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  > p:first-child {
+    margin-bottom: .2rem;
+  }
+}

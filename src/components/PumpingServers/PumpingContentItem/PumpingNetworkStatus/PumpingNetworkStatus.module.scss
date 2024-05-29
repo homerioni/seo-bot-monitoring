@@ -1,0 +1,67 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 100%;
+
+  &.purple {
+    border: 1px solid #ADB8FF66;
+    background-color: #ADB8FF66;
+  }
+
+  &.azure {
+    border: 1px solid #5BC2FF66;
+    background-color: #5BC2FF66;
+  }
+
+  &.green {
+    border: 1px solid #B8E793;
+    background-color: #B8E793;
+  }
+
+  &:hover {
+    > *:not(.copyBox, svg) {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.copyBox {
+  position: absolute;
+  left: -.7rem;
+  bottom: calc(100% + 1rem);
+  padding: 1rem .8rem;
+  border-radius: 1rem;
+  background-color: $purple;
+  box-shadow: 0 .5rem 2.6rem 0 #353B5A4D;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .25s ease, visibility .25s;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 2rem;
+    top: 100%;
+    width: .8rem;
+    height: .8rem;
+    border-radius: .1rem;
+    transform: translateY(-65%) rotate(45deg);
+    background-color: $purple;
+  }
+}

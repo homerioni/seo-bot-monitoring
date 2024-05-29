@@ -1,0 +1,92 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: max(.2rem, 2px);
+  height: 3.6rem;
+  padding: 0 .4rem;
+  border-radius: 10rem;
+  background-color: $gray-light;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 100%;
+  background-color: #A1B1C5;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: white;
+  cursor: pointer;
+
+  > img {
+    width: 1.6rem;
+    height: 1.6rem;
+    object-fit: contain;
+
+    &.active {
+      display: none;
+    }
+  }
+
+  > *:not(img, span, .copyBox) {
+    left: -1.2rem;
+  }
+
+  &:hover {
+    background-color: var(--color);
+
+    > img.disable {
+      display: none;
+    }
+
+    > img.active {
+      display: block;
+    }
+
+    > *:not(img, span, .copyBox) {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.copyBox {
+  position: absolute;
+  left: -1.2rem;
+  bottom: calc(100% + 1rem);
+  padding: 1rem .8rem;
+  border-radius: 1rem;
+  background-color: $purple;
+  box-shadow: 0 .5rem 2.6rem 0 #353B5A4D;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .25s ease, visibility .25s;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 2rem;
+    top: 100%;
+    width: .8rem;
+    height: .8rem;
+    border-radius: .1rem;
+    transform: translateY(-65%) rotate(45deg);
+    background-color: $purple;
+  }
+}

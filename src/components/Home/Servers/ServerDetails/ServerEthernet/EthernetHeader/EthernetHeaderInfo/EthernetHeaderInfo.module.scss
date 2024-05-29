@@ -1,0 +1,61 @@
+@import "src/assets/scss/param";
+
+.disabled {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.labelBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 22rem;
+  border-radius: 100rem;
+  background-color: rgba(235, 236, 242, 0.70);
+
+  &.time {
+    width: 18rem;
+
+    input {
+      max-width: 6rem;
+      width: 2rem;
+      margin-right: .2rem;
+    }
+  }
+}
+
+.empty {
+  width: 100% !important;
+
+  ~ * {
+    display: none;
+  }
+}
+
+.label {
+  flex: auto;
+  padding-left: 2.5rem;
+
+  > input {
+    display: inline-block;
+    width: 100%;
+  }
+}

@@ -1,0 +1,175 @@
+@import "../../../../../../assets/scss/param";
+
+.configBox {
+  padding: 1rem;
+  border: 1px solid white;
+  border-radius: 3rem;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.configTitle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-right: 4rem;
+
+  > label {
+    cursor: pointer;
+
+    > input {
+      display: none;
+    }
+
+    &:nth-child(2) {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-left: 1.8rem;
+    }
+  }
+}
+
+.qty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 100%;
+  background-color: white;
+  font-size: 1.3rem;
+  color: #8998AB;
+}
+
+.nameBox {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  transform: translateY(1px);
+}
+
+.serversLength {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+
+  > svg {
+    width: 1.6rem;
+    height: 1.4rem;
+  }
+}
+
+.arrowBtn {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  width: 1.6rem;
+  height: 1rem;
+  transform: translateY(-50%);
+  transition: transform .2s ease;
+
+  > svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &.active {
+    transform: translateY(-50%) scaleY(-1);
+  }
+}
+
+.serversList {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  height: 0;
+  overflow: hidden;
+  transition: height .3s ease, padding-bottom .3s ease, margin-top .3s ease;
+
+  &.active {
+    height: calc(var(--qty) * 2.8rem + 2.6rem);
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+.listHeader {
+  padding-left: 6rem;
+  margin-bottom: .5rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #93A1B2;
+
+  > p {
+    display: inline-block;
+
+    &:nth-child(1) {
+      width: 14rem;
+    }
+    &:nth-child(2) {
+      width: 9.4rem;
+    }
+    &:nth-child(3) {
+      width: 9.4rem;
+    }
+    &:nth-child(4) {
+      width: auto;
+    }
+  }
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  padding-left: 1.2rem;
+}
+
+.listStatus {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #EEEFF5;
+  border-radius: 100%;
+  margin-left: 1.4rem;
+  margin-right: .4rem;
+  background-color: $gray;
+
+  &.ACTIVE {
+    background-color: $green;
+  }
+
+  &.NON_ACTIVE {
+    background-color: $red;
+  }
+
+  &.PARTIALLY_ACTIVE {
+    background-color: $purpleStatus;
+  }
+}
+
+.listText {
+  transform: translateY(1px);
+  font-weight: 400;
+  font-size: 1.1rem;
+
+  &:nth-child(3) {
+    width: 14rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+  &:nth-child(4) {
+    width: 9.4rem;
+  }
+  &:nth-child(5) {
+    width: 9.4rem;
+  }
+  &:nth-child(6) {
+    width: auto;
+  }
+}

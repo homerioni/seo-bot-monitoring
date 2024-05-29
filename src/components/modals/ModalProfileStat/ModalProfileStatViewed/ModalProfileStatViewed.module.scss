@@ -1,0 +1,63 @@
+@import "src/assets/scss/param";
+
+.main {
+  padding: 1.5rem;
+  border-radius: 3rem;
+  background-color: rgba(238, 239, 245, 0.5);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 26rem;
+  gap: 1rem;
+
+  &::-webkit-scrollbar {
+    height: 1rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: $gray;
+  }
+}
+
+.item {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 2rem;
+}
+
+.values {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .2rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+
+  > * {
+    &:nth-child(1) {
+      color: #8B98EE;
+    }
+    &:nth-child(2) {
+      color: #FE6E1E;
+    }
+  }
+}
+
+.lineValue {
+  display: block;
+  width: 100%;
+  min-height: 2rem;
+  border-radius: 100rem;
+  background-color: #8B98EE;
+}
+
+.index {
+  font-size: 1.2rem;
+  color: #8998AB;
+}

@@ -1,0 +1,264 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: relative;
+  z-index: 3;
+  width: 14.4rem;
+  height: 3.6rem;
+}
+
+.selectedItem {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .2rem;
+  width: 100%;
+  height: 100%;
+  padding-left: 2rem;
+  padding-right: 4rem;
+  border-radius: 1.8rem;
+  background-color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+  cursor: pointer;
+
+  > svg {
+    position: absolute;
+    right: 1.3rem;
+    top: 50%;
+    width: 1.6rem;
+    height: 1rem;
+    transform: translateY(-50%);
+    transition: transform .2s ease;
+
+    &.active {
+      transform: translateY(-50%) scaleY(-1);
+    }
+  }
+}
+
+.subtitle {
+  margin-top: -.4rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #8998AB;
+}
+
+.list {
+  position: absolute;
+  left: -.9rem;
+  top: calc(100% - .5rem);
+  display: flex;
+  flex-direction: column;
+  width: calc(100% + 1.8rem);
+  max-height: 30rem;
+  border: 1rem solid #EEEFF5;
+  border-radius: 2.5rem;
+  background-color: white;
+  overflow-y: auto;
+}
+
+.item {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  min-height: 3.2rem;
+  padding: 0 2rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  cursor: pointer;
+
+  > input {
+    display: none;
+  }
+
+  &:hover {
+    background-color: rgba(0,0,0,.05);
+  }
+
+  > .qty {
+    width: 2rem;
+    height: 2rem;
+    padding: .5rem;
+    border-radius: 100%;
+    background-color: #EEEFF5;
+
+    > span {
+      font-weight: 800;
+
+      &:first-child {
+        font-size: .8rem;
+      }
+
+      &:last-child {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 48.01em) {
+  .listHeader {
+    display: none;
+  }
+
+  .icon {
+    display: none;
+  }
+}
+
+@media (max-width: 48em) {
+  .main {
+    z-index: 10;
+    width: 30.6rem;
+    height: 8rem;
+  }
+
+  .selectedItem {
+    padding-left: 3.2rem;
+    padding-right: 7.2rem;
+    border-radius: 10rem;
+    font-size: 2.8rem;
+
+    > svg {
+      right: 2.2rem;
+      width: 3rem;
+      height: 2rem;
+    }
+  }
+
+  .subtitle {
+    margin-top: -.8rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  .list {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 100%;
+    height: 100%;
+    padding: 3.2rem;
+    max-height: none;
+    border: none;
+    border-radius: 0;
+    background-color: white;
+    overflow-y: auto;
+  }
+
+  .listHeader {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    margin-bottom: 4rem;
+  }
+
+  .listTitleBox {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+
+    > p {
+      &:nth-child(1) {
+        font-weight: 400;
+        font-size: 4.4rem;
+      }
+
+      &:nth-child(2) {
+        font-weight: 700;
+        font-size: 3.2rem;
+        color: #8998AB;
+      }
+    }
+  }
+
+  .listClose {
+    flex: none;
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    background-color: #EEEFF5;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 36%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      height: 2px;
+      border-radius: 10rem;
+      background-color: $black;
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  .item {
+    gap: 1.6rem;
+    min-height: 5.6rem;
+    padding: 0;
+    font-size: 3.2rem;
+
+    > input:checked ~ .icon {
+      border: 2px solid #78C33B;
+
+      &:before {
+        content: '';
+      }
+    }
+
+    > .qty {
+      width: 2rem;
+      height: 2rem;
+      padding: .5rem;
+      border-radius: 100%;
+      background-color: #EEEFF5;
+
+      > span {
+        font-weight: 800;
+
+        &:first-child {
+          font-size: .8rem;
+        }
+
+        &:last-child {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+
+  .icon {
+    flex: none;
+    position: relative;
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 100%;
+    border: 2px solid #DDDFEC;
+
+    &:before {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      display: block;
+      width: 1.6rem;
+      height: 1.6rem;
+      transform: translate(-50%, -50%);
+      border-radius: 100%;
+      background-color: #78C33B;
+    }
+  }
+}

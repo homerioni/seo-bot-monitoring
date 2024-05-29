@@ -1,0 +1,26 @@
+@import "/src/assets/scss/param";
+
+.version {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.4rem;
+  height: 2.4rem;
+  padding: 0 0.3rem;
+  border-radius: 100rem;
+  background-color: white;
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: $orange-dark;
+
+  > span {
+    max-width: 3.8rem;
+    white-space: nowrap;
+    transform: translateY(1px);
+    overflow: hidden;
+  }
+
+  &.gray {
+    background-color: #F1F2F7;
+  }
+}

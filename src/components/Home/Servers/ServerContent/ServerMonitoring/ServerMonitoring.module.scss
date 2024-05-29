@@ -1,0 +1,58 @@
+@import "../../../../../assets/scss/param";
+
+.main {
+  display: flex;
+  align-items: center;
+
+  > li {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+
+    > div {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+
+      > span {
+        transform: translateY(.1rem);
+      }
+    }
+
+    img,
+    svg {
+      flex: none;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    &:not(:last-child) {
+      margin-right: .9rem;
+
+      &:after {
+        content: '/';
+        font-size: 1.6rem;
+        color: #A6AFBE;
+      }
+    }
+  }
+}
+
+.error {
+  font-weight: 700;
+  color: $red;
+}
+
+.notFlow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 3.6rem;
+  border-radius: 100rem;
+  background-color: #FEFEFE;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #798697;
+}

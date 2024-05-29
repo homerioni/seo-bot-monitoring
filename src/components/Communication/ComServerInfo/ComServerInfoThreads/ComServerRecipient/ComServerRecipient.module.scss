@@ -1,0 +1,162 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: auto;
+  padding: 10px 12px 10px 10px;
+  border-radius: 16px;
+  background-color: rgba(238, 239, 245, 0.7);
+  font-size: 12px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #CACCDA;
+  }
+
+  &.active {
+    &:before {
+      background-color: $green;
+    }
+  }
+
+  &.disable {
+    &:before {
+      background-color: $red;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-right: 8px;
+  margin-bottom: 6px;
+}
+
+.owner {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-1px);
+  border-radius: 100%;
+
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  > svg {
+    display: none;
+  }
+
+  &.our {
+    display: flex;
+    background-color: $purple;
+
+    > svg {
+      width: 9px;
+      height: 9px;
+
+      &:first-child {
+        display: block;
+      }
+    }
+  }
+
+  &.rent {
+    display: flex;
+    background-color: $pink;
+
+    > svg {
+      width: 13px;
+      height: 13px;
+
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+}
+
+.power {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 20px;
+  margin-right: 8px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  color: white;
+
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  > span {
+    transform: translateY(1px);
+  }
+
+  &.azure {
+    background-color: $azure;
+  }
+
+  &.green {
+    background-color: $green;
+  }
+}
+
+.name {
+  margin-right: 8px;
+}
+
+.ip {
+  font-weight: 400;
+}
+
+.path {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+
+  > span {
+    transform: translateY(1px);
+  }
+
+  > svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 7px;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 13px;
+  margin-top: auto;
+}
+
+.footerDesk {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 400;
+
+  svg {
+    transform: translateY(1px);
+  }
+}

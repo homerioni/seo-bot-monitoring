@@ -1,0 +1,80 @@
+@import "./src/assets/scss/param";
+
+.main {
+  width: 100%;
+}
+
+.servers {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 2rem;
+  background-color: rgba(238, 239, 245, 0.7);
+}
+
+.addBtn {
+  order: 2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 23.2rem;
+  padding: 1rem 4rem 1rem 1.5rem;
+  border: 1px solid $gray;
+  border-radius: 1.5rem;
+  background-color: white;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: .02em;
+  @include min-btn-hover;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    width: 1.6rem;
+    height: 2px;
+    transform: translateY(-50%);
+    background-color: $green;
+  }
+
+  &:after {
+    transform: translateY(-50%) rotate(90deg);
+  }
+}
+
+.listBox {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 1rem);
+  z-index: 1;
+  width: 100%;
+  padding: 2rem;
+  transform: scaleY(0);
+  transform-origin: top;
+  border: 1px solid #B8BED6;
+  border-radius: 3rem;
+  background-color: #F3F4F8;
+  transition: transform .2s ease;
+
+  &.active {
+    transform: scaleY(1);
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  max-height: 30vh;
+  margin: 0 -2rem;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}

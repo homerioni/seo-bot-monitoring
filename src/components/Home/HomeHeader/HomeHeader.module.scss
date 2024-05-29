@@ -1,0 +1,95 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: $placeholder;
+
+  > * {
+    flex: none;
+    display: flex;
+    align-items: center;
+
+    &:nth-child(1) {
+      width: 9.6rem;
+    }
+    &:nth-child(2) {
+      width: 15.6rem;
+    }
+    &:nth-child(3) {
+      width: 16.5rem;
+    }
+    &:nth-child(4) {
+      width: 13rem;
+    }
+    &:nth-child(5) {
+      width: 14rem;
+    }
+    &:nth-child(6) {
+      position: relative;
+      width: 30.2rem;
+    }
+    &:nth-child(7) {
+      width: 30.2rem;
+    }
+    &:nth-child(8) {
+      width: 10.2rem;
+    }
+    &:nth-child(9) {
+      width: 12.2rem;
+    }
+    &:nth-child(10) {
+      width: 9rem;
+    }
+    &:nth-child(11) {
+      flex: auto;
+      justify-content: flex-end;
+      min-width: 7rem;
+      text-align: right;
+    }
+
+    &:not(:last-child) {
+      padding-right: 1.5rem;
+    }
+  }
+
+  > * > svg {
+    flex: none;
+    width: 1.5rem;
+    height: .8rem;
+    transform: translateY(-1px);
+
+    &:first-child {
+      margin-right: 1.2rem;
+    }
+
+    &:last-child {
+      margin-left: 1.2rem;
+    }
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid white;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: -2rem;
+    z-index: -1;
+    width: calc(100% + 4rem);
+    height: calc(100% + 3rem);
+    background-color: rgba(242, 242, 247);
+  }
+}

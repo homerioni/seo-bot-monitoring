@@ -1,0 +1,76 @@
+.main {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  border: .2rem solid #eeeff5;
+  border-radius: 100%;
+  background-color: var(--color);
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.text {
+  > div {
+    display: inline;
+
+    &:not(:first-child) {
+      &:before {
+        content: '/';
+        margin: 0 .3rem;
+        color: #A1B1C5;
+      }
+    }
+
+    &:nth-child(2) {
+      color: var(--color);
+    }
+
+    > svg {
+      width: 1.2rem;
+      height: 1rem;
+      margin-right: .3rem;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .main {
+    gap: 1.2rem;
+  }
+
+  .icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    border: .4rem solid white;
+  }
+
+  .textBox {
+    font-size: 2.8rem;
+  }
+
+  .text {
+    > div {
+      &:not(:first-child) {
+        &:before {
+          margin: 0 .8rem;
+        }
+      }
+
+      > svg {
+        width: 2.4rem;
+        height: 2rem;
+        margin-right: .6rem;
+      }
+    }
+  }
+}

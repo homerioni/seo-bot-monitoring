@@ -1,0 +1,14 @@
+.main {
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  background-color: white;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}

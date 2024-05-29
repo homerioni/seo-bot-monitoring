@@ -1,0 +1,101 @@
+@import "src/assets/scss/param";
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 3.6rem;
+  margin-bottom: 1rem;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &.notFlex {
+      display: block;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  > .main {
+    margin-bottom: 0;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.dashNameBox {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin: 0 -.5rem;
+
+  > b {
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    margin-right: .5rem;
+    border-radius: 100%;
+    background-color: #EEEFF5;
+    color: #8998AB;
+  }
+}
+
+@media (max-width: 48em) {
+  .main {
+    flex-direction: column;
+    align-items: normal;
+    justify-content: normal;
+    gap: 3.2rem;
+    min-height: 8rem;
+    margin-bottom: 3rem;
+
+    &.flexMob {
+      flex-direction: row;
+      gap: 10rem;
+    }
+
+    > div {
+      justify-content: space-between;
+    }
+  }
+
+  .subtitle {
+    margin-top: 1.6rem;
+    font-size: 2.4rem;
+  }
+
+  .title {
+    width: 51rem;
+    font-size: 3.6rem;
+  }
+
+  .dashNameBox {
+    font-size: 3.2rem;
+    margin: 0;
+
+    > b {
+      width: 5.6rem;
+      height: 5.6rem;
+      margin-right: 1rem;
+    }
+  }
+}

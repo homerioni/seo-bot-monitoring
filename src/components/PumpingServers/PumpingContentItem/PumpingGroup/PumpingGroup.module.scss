@@ -1,0 +1,76 @@
+@import "src/assets/scss/param";
+
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  width: 9.2rem;
+  height: 3.6rem;
+  padding: .6rem;
+  border-radius: 10rem;
+  background-color: $gray-light;
+  font-weight: 700;
+  font-size: 1.3rem;
+
+  &:hover {
+    .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.icon {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 100%;
+  background-color: white;
+
+  > svg {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+}
+
+.tooltip {
+  position: absolute;
+  left: -.7rem;
+  top: calc(100% + .5rem);
+  z-index: 1;
+  padding: .8rem;
+  border-radius: 1rem;
+  background-color: $black;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: white;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .25s, opacity .25s ease;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 2rem;
+    bottom: 100%;
+    width: .8rem;
+    height: .8rem;
+    border-radius: .1rem;
+    transform: translateY(65%) rotate(45deg);
+    background-color: $black;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1rem;
+    width: 100%;
+    height: 1rem;
+  }
+}

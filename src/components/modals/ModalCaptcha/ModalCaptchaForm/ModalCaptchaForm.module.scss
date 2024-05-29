@@ -1,0 +1,18 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 3.5rem;
+}
+
+.title {
+  flex: 100%;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+}
+
+.flex33 {
+  flex: 30%;
+  max-width: 50.6rem;
+}

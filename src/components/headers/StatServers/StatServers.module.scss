@@ -1,0 +1,23 @@
+.main {
+  display: flex;
+  width: fit-content;
+  border-radius: 100rem;
+  border: 1px solid #EEEFF5;
+
+  > * {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .6rem 1rem;
+
+    &:not(:last-child) {
+      border-right: 1px solid #EEEFF5;
+    }
+
+    > span {
+      transform: translateY(1px);
+      font-weight: 700;
+      font-size: 1.6rem;
+    }
+  }
+}

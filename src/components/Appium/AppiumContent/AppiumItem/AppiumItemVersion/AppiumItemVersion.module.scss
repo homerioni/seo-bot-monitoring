@@ -1,0 +1,17 @@
+@import "src/assets/scss/param";
+
+.version {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 100%;
+  background-color: $orange-dark;
+  font-size: 1.3rem;
+  color: white;
+
+  &.last {
+    background-color: $green;
+  }
+}
